@@ -1,0 +1,34 @@
+-- RESUMO SEÇÃO 01 DO CURSO JAVA COMPLETO 2023 PROGRAMAÇÃO ORIENTADA A OBJETOS + PROJETOS --
+
+Esta videoaula refere-se à introdução do curso, para nos dar uma visão geral sobre o curso e dar dicas sobre como extrair o máximo de conhecimento no curso.
+
+Além de saber utilizar as ferramentas comerciais para o desenvolvimento dos aplicativos, como um bom desenvolvedor também é importante ter um bom fundamento sobre as técnicas e os fundamentos básicos, como estruturas de dados, programação orientada a objetos, programação funcional, etc.; pois isso irá garantir ao desenvolvedor uma base sólida, que no futuro irá garantir o seu sucesso.
+Para a formação de um bom profissional, na videoaula foi citado que a formação de um profissional é dividido em duas etapas, tais quais são:
+1- Fundamentos -> Aprendemos disciplinas importantes e indispensáveis para o desenvolvimento de um bom profissional, essas disciplinas são:
+1.1 Lógica de Programação -> Alfabetização sobre programação, como estrutura de controles, repetitivas, arrays, etc;
+1.2 Estrutura de dados 
+1.3 Programação Orientada a objetos
+1.4 Banco de dados
+1.5 Análise e Design de Sistemas
+2- Comercial -> Após a conclusão da etapa 1, o desenvolvedor passa para a etapa comercial onde será feita a construção de aplicativos e produtos
+2.1 Back-End ->
+2.2 Web ->
+2.3 Mobile ->
+2.4 Desktop ->
+
+Para utilizar ferramentas comerciais para desenvolvimento de aplicativos e produtos, deve-se ter uma boa fundamentação.
+
+O curso irá abordar principalmente a programação orientada a objeto, mas abordará lógica, bastante estrutura de dados, bancos de dados, análise comercial de design, também será visto a parte comercial em projetos que serão desenvolvidos ao longo do curso.
+
+O curso possui três pilares principais: programação orientada a objetos, linguagem java e um conteúdo com muita prática e exercícios reais.
+Os exercícios reais serão diferentes dos que são passados nas faculdades de TI, porém serão voltados a projetos reais como pedidos, contas bancárias, etc.
+
+O percurso de formação do curso é composto pelo seguinte conteúdo:
+
+1- Lógica de programação Algoritmos usando Java (iniciante), onde serão estudados conceitos de programação (o que é algoritmo, programação, etc.), introdução à linguagem java (Contextualização, históricos, ensinar instalar, explicar versões java), estruturas sequenciais, condicionais e repetitivas.
+2- Java e Programação Orientada a Objetos (pt1), onde será estudada a introdução à programação orientada a objetos (construtores; palavra this; sobrecarga; encapsulamento), comportamento de memórias, arrays, listas, tópicos em java, (bônus) nivelamento sobre git e github, enumerações e composições, herança e polimorfismo, tratamentos de exceções.
+3- Projeto (xadrez), será desenvolvido um projeto de xadrez.
+4- Java e Programação Orientada a Objetos (pt2) + programação funcional com expressão lambda, será abordado como trabalhar com arquivos, interfaces, generics, set, map, programação funcional e expressões lambdas, (bônus) nivelamento álgebra relacional, sql, mysql, acesso a bancos de dados com jdbc e interface gráfica com JavaFX.
+5- Projeto (Aplicação desktop), onde será desenvolvida uma aplicação funcional para desktop.
+6- Projeto (Web Services), onde será desenvolvido uma aplicação web, utilizando Spring Boot JPA/Hibernate.
+7- Projeto (Web Services), onde será desenvolvido uma aplicação web, utilizando MongoDB.
