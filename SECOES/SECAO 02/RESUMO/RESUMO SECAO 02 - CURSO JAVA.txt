@@ -1,0 +1,75 @@
+-- RESUMO SEÇÃO 02 - CONCEITOS DE PROGRAMACAO - CURSO JAVA COMPLETO 2023 PROGRAMAÇÃO ORIENTADA A OBJETOS + PROJETOS --
+
+Este capitulo e para iniciantes, onde sera abordado o que e algoritimo, o que e compilacao, interpretacao, maquina virtual.
+
+Um algoritomo e uma sequencia finita de instrucoes para resolver um problema, aplicado nao so em programacao, por exemplo uma receita de um bolo e considerado um algoritmo, pois e uma serie de passos que foram descritos na receita de bolo devem ser seguidos em ordem para podermos conseguir fazer um bolo.
+A automacao consiste em utilizar maquinas para executar o procedimento de forma automatica ou sem-automatica, por exemplo, em um caso de um algoritimo de roupa suja, poderiamos utilizar uma maquina para realziar a lavagem da roupa em vez de fazer a mao. 
+Computador -> E divido em 2 partes, tais quais sao:
+1- Hardware -> parte fisica(o pc em si).
+2- Software -> Parte logica(progrmas como sistemas operacionais, aplicativos, jogos, utilitario, etc.).
+Um programa de computador sao algoritimos executados pelo computador.
+Com isso podemos dizer que o computador e uma maquina que automatiza a execucao de algoritmos, porem apenas algoritimos computacionais como processamento de dados, calculos.
+
+Para construirmos um programa de computador, iremos precisar de:
+1- Linguageum de programacao, no caso deste curso sera java, uma linguagem de programacao e um conjunto de regras lexas e sintaticas para escrever o programa.
+2- Uma IDE, no caso deste curso sera o ecplise, um IDE e um software para editar e transformar o programa.
+3- Um compilador, um compilador e um software para transformar o codigo fonte em codigo objeto 
+4- Um gerador de codigo ou maquina virtual, uma maquina virtual e um software que permite que o programa seja executado.
+
+Uma linguagem de programcao e uma conjunto de regas de ortografia(lexicas) e de gramaticas(sintaticas) para se escrever os programas.
+Lexica dis respeito a correcao das palavras isoladas(ortografia).
+Sintatica diz respeito a correcao das sentencas(gramatica).
+
+IDE - Ambiente Integrado de Desenvolvimento, e um conjunto de softwares utilizado para construcao de cprogramas como code blocks para C e C++, eclipse e netbeans para Java.
+as funcionalidades de uma IDE sao:
+1- edicao de codigo fonte
+2- depuracao e testes
+3- construcao do produto final
+4- sugestao de modelos
+5- auxilar em varias tarefas do projeto
+6- etc.
+
+O compilador e o cara que transforma o codigo fonte em codigo objeto e a maquina virtual ou gerador de codido e o que permite o codigo a ser executado.
+
+Codigo Fonte e aquele escrito pelo programador em uma determinada linguagem de programacao, porem ele nao e entendido pelo computador e nem pelo sistema operacional, pois devemos converter o codigo fonte em um codigo que possa ser executado.
+A compilacao e um processo que converte o codigo fonte no que a gente chamamos de codigo objeto.
+Esse processo de compilacao e feito por um software chamado compulador, durante o processo de compilacao o compilador ira realizar a analise lexa e sintatica no codigo fonte, se tiver algum erro no meu codigo fonte a compilacao e abortada e o progamador e obrigado a corrigir esses erros.
+Uma vez que o codigo fonte foi compilado e passado para codigo objeto, esse codigo objeto precissa passar para o gerador de codigo para gerar um codigo executavel, e o que chamamos de build, e com isso esse codigo executavel o sistema operacional consegue executar o codigo.
+O modelo de compilacao e execucao citado acima e adotado por algumas linguagens como C e C++ por exemplo.
+Existem outros metodos de compilacao de interpretacao do codigo fonte para um codigo que o computador consiga lar, temos o modelo de interpretacao, onde o interpretador fara a analise lexa e sintatica, a geracao de codigo, tudo isso sob demanda, ou seja o interpretador vai lendo o codigo fonte traduzindo para o executavel e executando.
+O modelo de compilacao descrito acima e utilizados por algumas linguagens como PHP, JS, PY sao as linguageuns interpretadas.
+E temos uma terceira abordagem que a a hibrida, onde temos o codigo fonte, o mesmo passa por uma pre compilacao que fara as analise lexas e sintaxas do codifo fonte, gerando o codigo objeto, porem na arbodagem hibrida ele recebe o nome de bytecode, onde o bytecode e um codigo ja pre compilado porem ao inves de passar por um gerador de codigo, e  gerar um codigo executavel, na abordagem hibrida, o bytecode sera executado por uma maquina virutal, onde a mesma fara a interpretacao deste bytecode e depois gera o programa e executa o mesmo.
+A abordagem acima descrita e utilizada pelas linguagens JAVA e C#, a JavaVirtualMachine executa a linguagem JAVA e Microsfot .NET executa o C#, a linguagem JAVA que tera um grande foco neste curso.
+
+Vantagens:
+
+Compilacao:
+1- Velocidade do programa -> 
+2- Auxilio do compilador antes da execucao -> Se tiver erro lexo ou sintaxico nao roda
+Codigo fonte
+Codigo executavel(especifico para cada sistema)
+Sistema Operacional
+Hardware
+(C C++)
+
+Interpretacao:
+1- Flexibiliade de manutencao do aplicativo em producao -> Possivel fazer edicao sem tirar o sistema fora do ar
+2- Expressividade da linguagem -> 
+3- Codigo fonte nao precisa ser recompilado para rodar em plataformas diferentes -> Pode rodar em diferentes sistemas bastando ter um interpretador no sistema
+Codig Fonte
+Interpretador(especifico para o SO)
+Sistema Operacional
+Hardware
+(PHP JS PYTHON)
+
+Hibridas:
+1- Velocidade do programa -> 
+2- Auxilio do compilador antes da execucao -> Se tiver erro lexo ou sintaxico nao roda
+3- Flexibiliade de manutencao do aplicativo em producao -> Possivel fazer edicao sem tirar o sistema fora do ar
+4- Codigo fonte nao precisa ser recompilado para rodar em plataformas diferentes -> Pode rodar em diferentes sistemas bastando ter um interpretador no sistema
+Codigo fonte
+bytecode(codigo fonte pre compliado)
+Maquina virtual(especifica para cada SO)
+Sistema Operacional
+Hardware
+(JAVA C#)
