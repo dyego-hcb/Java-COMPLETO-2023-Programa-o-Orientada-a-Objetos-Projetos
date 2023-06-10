@@ -1,0 +1,63 @@
+-- RESUMO SEÇÃO 03 - INTRODUCAO A LINGUAGEM JAVA - CURSO JAVA COMPLETO 2023 PROGRAMAÇÃO ORIENTADA A OBJETOS + PROJETOS --
+
+Este capitulo e recomendado a se assistir pois sera abordado as versoes do java, como achar documentacao, como funciona a versao LTS, que e a versao de longo periodo, como sao as versoes mais curtas e tambem instalar o java e finalizar a secao com o primeiro programa java rodando no pc.
+
+JAVA SE -> STANDAR EDITION VERSAO PADRAO DO JAVA
+LTS -> LONG TERM SUPORT -> Suporte de longo periodo, no caso de exemplo da video aula foi a versao JAVA SE 11.0.4(LTS) e oracle estabeleceu que ela vai ter suporte de varios anos, e com isso a oracle vai lancando as versoes 12, 13, 14, ..., ate lancar uma nova versao LTS
+Quando e lancada uma nova versao LTS as outras versoes como no caso do exemplo acima 12, 13, 14, ..., serao eliminadas, para que outras versoes de curto periodo de suporte sejam criadas.
+Utiliza-se versoes LTS nas empresas para manter padrao.
+Neste curso utilizara a versao 11 LTS.
+
+Java e uma linguaguem de programcao, mas porem e uma plataforma de desenvolvimento e execucao, onde o java ira nos ofercer bibliotecas (API) para usarmos nas aplicacoes e tambem oferece um ambiete de execucao, onde deve estar instalado o ambiete de execucao para rodarmos as apliacoes java, o desenvolvedor tambem deve instalar o kit de desenvolvimento java para construir aplicacoes em java.
+Com o surgimento do java, varios problemas foram resolvidos como:
+1- Ponteiros/Gerenciamento de memoria -> Menos sucetiveis a erros e analise a mao
+2- Portablidade de falha -> Reescrever parte do codigo ao mudar de SO
+3- Utilizacao em diversos dispositivos -> roda em todos
+4- custos -> aumentado por tentar rodar em diversos dispositivos
+Foi criada pela SunMicrosystems no meio da decada de 90 e adquirida pela oracle em 2010
+
+Aspectos notaveis da linguagem java
+1- Codigo compilado para bytecode e executado em maquina virtual JVM 
+2- Portavel, segura, robusta
+3- Roda em varios tipos de dispositivos
+4- Domina o mercado corporativo desde o fim do sec20
+5- Padrao android por muitos anos
+
+JAVA ME -> Java Micro Edition utilizado em dispositivos embarcados e moveis - IoT (versao inxuta internet of things)
+JAVA SE -> Java Standard Edition - core - utilizado em desktops e servidores (principal)
+JAVA EE -> Java Enterprise Edition utilizado em aplicacoes corporativas (especificacoes para empresas)
+
+JVM - Java Virtual Machine - necessaria para executar sistemas em java e necessario essa JVM para ser um desenvolvedor java deve ser instalado JVM tambem nos clientes
+Compilador -> E um programa utilitado para converter o codigo fonte em codigo objeto e depois o codigo objeto para executavel
+Interpretacao -> E um utilitario que pega o codigo fonte e gradualmente vai transformando o codigo fonte em executavel
+Pre-Compiladas + Maquina virtual -> Sao linguagens pre compiladas e depois o codigo gerado pela pre compilacao e executado pela maquina virtual.
+
+As Linguagens compiladas geram executaveis especificos para aquele SO, deve-se recompilar para traduzir o executavel para o SO desejado, erro de portabilidade.
+As Linguagens interpretadas funcionada da seguinte maneira, cada SO tem um interpretador de uma determinada linguaguem que faz com que seja possivel executar o mesmo codigo em SO diferentes, diferentemente das linguagens de compilador, podendo ocorrer erros de portablidade como dito acima.
+As linguagens compiladas sao mais rapidas devido que o compilador faz a analise lexa e sintaxica antes de gerar codigo objeto para gerar o executavel, e as linguagens interpretadas podem ser um pouco mais lentas devido que sua analise lexa e sintaxica e feita em decorrer da compilacao do codigo fonte.
+Porem as linguagens compiladas sao menos sucetivas a bugs ou erros do que as linguagens interpretadas.
+Linguagem em arbodagem hibrda, e a juncao das 2 acima, onde o compilador gera um arquivo chamado bytecode que e uma represntacao intermediaria do codigo ja compliada, garantido que esta correto no ponto de vista sitaxico, e a maquina virtual faz com que seja possivel rodar em diversas plataformas operacionais desde que tenham a JVM instada.
+
+Java e uma linguagem orientada a objetos, e a unidade base logica de uma aplicacao orientada a objetos e a classe, todo codigo em java deve estar dentro de uma classe.
+Depois da classe, temos o conceito de pacotes, onde os pacotes sao agrupamentos logicos de classes relacionadas, exemplo pacote Entitiens representam entidade do neogicio como produto, cliente, pedido, etc., pacote Services representam serivocos como email, pedidos, login, etc., pacotes Repositores representam repositorios como dados
+Modulo foi introduzido na versao 9 em diante, o modulo e um agrupamento logico de pacotes relacionados, como por exemplos modos de logica financeira e modo de graficos onde estarao nossa interface grafica por exemplo.
+Runtime e o agrupamento fisico, ou seja e uma unidade fisica que pode ser instalada para rodar a aplicacao java nos dispositivos.
+Aplicaco e um agrupamento de modulos relacionados, exemplo sistema de comercio eletronico composto por n modulos.
+
+Baixamos o java jdk 11
+Baixamos o ecplise IDE for Enterprise Java and Web Developers para desenvolvimento java e selecionamos a workspace para a IDE Eclise salvar seus projetos.
+
+Definimos a worskapce no computador para guardar o projeto 
+Mudar o layout do ecplise para focar no desenvolvimento de aplicacoes java
+Aprendemos a zera o layout caso feche alguma janela
+Devemos habilitar o console pois nao aparece na pespectiva java padrao
+Criamos um projeto java
+
+Definimos como o nome sc03_projeto1, nao criamos modulos nesse momento
+criamos uma nova classe main na pasta src no pacote default, neste momento ainda nao iremos mecher com pacotes nomeados
+Criamos um hello word padrao e executamos e rodou 
+
+Java organiza os projetos por pacote
+Classes devem comecar com a primeira letra Maiuscula.
+Classes comecam com a abertura de { e termina com }
+System.out.println("Dentro Aqui Aparece") -> funcao para printar no console deve-se utilizar " " para escrever strings
