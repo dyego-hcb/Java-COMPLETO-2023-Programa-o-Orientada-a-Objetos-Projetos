@@ -1,0 +1,315 @@
+-- RESUMO SEÇÃO 04 (ESTRUTURA SEQUENCIAL) DO CURSO JAVA COMPLETO 2023 PROGRAMAÇÃO ORIENTADA A OBJETOS + PROJETOS --
+
+E um capitulo bem basico, onde iremos aprender sobre estrutura sequencial.
+
+Expressoes artimeticas sao aquelas expressoes que quando calculadas vai nos resultar um valor numerico, como por exemplo 4+5=0
+Os operadores aritimeticos em linguageuns de programacoes como C, C++, Java, C#, citadas na video-aula, sao:
+
++ -> Soma (Adicao)
+- -> Subtracao
+* -> Multiplicacao
+/ -> Divisao
+% -> Resto da Divisao (Mod)
+
+Como na matematica onde se tivessimos como por exemplo a expressao 2+3*4, iremos resolver primeiro a multiplicacao e depois a soma, esses operadores aritimeticos nas linguaguens de programacao tambem possui uma regra de precedencia entre eles, que é:
+
+1 -> * / % (Esses operadores aritimeticos tem uma precedencia maior, ou seja, sao feitos preferencialmente)
+2 -> + - (Sao feitos em segundo lugar)
+
+Porem, igual na matematica, se hover operadores artimeticos dentro de parenteses, como por exemplo (2+3)*4, iremos resolver primeiro a soma e depois a multiplicacao, isso tambem vale para realizar operacoes aritimenticas em linguagens de programacao, onde os operandos aritimeticos que estao dentro do parenteses, quebra a precedencia com os demais operandos fora dos parenteses, como podemos notar nos exemplos citados na video aula e reescrito abaixo.
+
+EX1: 2*6/3 RESULTADO = 4 (QUANDO A PRECEDENCIA E A MESMA, RESOLVE A EXPRESSAO DA ESQUERDA PARA DIREITA, NESTE CASO COMECAREMOS COM A MULTIPLIACAO)
+EX2: 3+2*4 RESULTADO = 11 (A PRECEDENCIA DE MULTIPLIACAO E MAIOR QUE A SOMA, PORTANTO, NESTA EXPRESSAO IREMOS RESOLVER PRIMEIRO A MULTIPLIACAO E DEPOIS A SOMA)
+EX3: (3+2)*4 RESULTADO = 20 (COMO DITO ANTERIORMENTE, QUANDO HA PARENTESES, O OPERANDO QUE ESTA DENTRO DO PARENTESES QUEBRA A PRECEDENCIA DA MULTIPLACAO, FAZENDO COM QUE RESOLVEMOS PRIMEIRO O QUE ESTA DENTRO DO PARENTESES)
+EX4: 60/(3+2)*4 RESULTADO = 48 (COMO DITO ANTERIORMENTE, QUANDO HA PARENTESES, O OPERENDO QUE ESTA DENTRO DO PARENTESES QUEBRA A PRECEDENCIA, ONDE TEMOS QUE RESOLVER PRIMEIRO O QUE ESTA DENTRO DO PARENTES ANTES DAS OUTRAS DEMAIS OPERACOES, COMO A DIVISAO E MULTIPLACAO TEM A MESMA PRECEDENCIA, RESOLVEMOS DA ESQUERDA PARA DIREITA)
+EX5: 60/((3+2)*4) RESULTADO = 3 (COMO DITO ANTEIRORMENTE, QUANDO HA PARENTENCES O OPERANDO QUE ESTA DENTRO DO PARENTESQUES QUEBRA A PRECEDENCIA, COMO TEMOS 2 PARATENES, UM DENTRO DO OUTRO, HAVERA 2 QUEBRAS DE PRECEDENCIA ONDE IREMOS RESOLVER PRIMEIRO O PARENTESES QUE ESTAO DENTRO DO OUTRO, ONDE IREMOS PRIMEIRO RESOLVER A SOMA, E DEPOIS MULTIPLICAR O RESULTADO DA SOMA POR 4 E DEPOIS DIVIDIR POR 60)
+EX6: 14%3 RESULTADO = 2 (COMO DITO ANTERIORMENTE, O MOD(%) PEGA O RESTO DA DIVISAO, ONDE 4X3=12 14-12=2)
+EX7: 19%5 RESULTADO = 4
+
+Um programa de computador em execucao esta sempre lidando com dados, e esses dados sao armazenados em variaveis.
+Variaveis sao uma porcao de memoria RAM utilizada para armazeanar dados durante a execucao dos programas, o termo porcao de memoria RAM foi citado pos visot que o computador tem uma certa quandndade de memoria RAM, que e utilizada pelos programas em execucao, e dentro dessa memoria os programas em execucao guardam os dados durante sua execucao, por exemplo um programa em execucao pode ter uma variavel chamada X com o valor 3.
+As variaveis precisam ser declaradas, e para isso devemos seguir uma regra de sintaxe em relacao a declaracao de variaveis, onde abaixo podemos ver essa regra de sintaxe.
+
+REGRA DE SINTAXE DE DECLARACAO DE VARIAVEL:
+<tipo> <nome> = <valor inicial (OPICIONAL, PODE HAVER VARIAVEIS SEM VALOR INICIAL)>;
+Exemplo de criacao:
+int idade = 25; (CRIA-SE NA MEMORIA RAM UMA PEQUENA PORCAO DE MEMORIA RESERVADA PARA O PROGRAMA E UMA CAIXINHA CHAMADA IDADE COM O VALOR IGUAL A 25 DO TIPO INTEIRO NESTE CASO, NAO SERA ACEITO VALORES DO TIPO DOUBLE EX 0.25 E NEM CARACTERES COMO LETRAS)
+double altura = 1.68; (CRIA-SE NA MEMORIA RAM UMA PEQUENA PORCAO DE MEMORIA RESERVADA PARA O PROGRAMA E UMA CAIXINHA CHAMADA ALTURA COM O VALOR IGUAL A 1.68 DO TIPO DOUBLE, NESTE CASO ACEITA VALORES FRACIONARIOS E INTEIROS TAMBEM, POREM NAO ACEITA CARACTERES COMO LETRAS)
+char sexo = 'F'; (CRIA-SE NA MEMORIA RAM UMA PEQUENA PORCAO DE MEMORIA RESERVADA PARA O PROGRAMA E UMA CAIXINHA CHAMADA SEXO COM VALOR IGUAL A 'F' DO TIPO CARACTER, COMO TRATA-SE DO TIPO CHAR, ACEITA APENAS 1 CARACTARE, SEJA LETRA OU NUMERO POREM APENAS 1, NAO E POSSIVEL ALOCAR MAIS QUE UM CARACTER NESTA VARIAVEL)
+
+Com isso podemos dizer que uma variavel deve possuir um nome (ou identificador), um tipo, valor e endereco na memoria, visto que ao executar o programa o mesmo ira alocar na memoria RAM um espaco para aquela variavel.
+
+A linguagem Java nao possui apenas os tipos de variaveis citadas acima, ela possuie diversos tipos de variaveis, porem iremos focar nas variaveis primitivas do javas que sao separadas em 5 categorias, tais quais sao:
+
+1- TIPOS NUMERICOS INTEIROS:
+TIPO: BYTE | TAMANHO: 8 BITS | VALORES: -128 A 127 | VALOR PADRAO: 0
+TIPO: SHORT | TAMANHO: 16 BITS | VALORES: -32768 A 32767 | VALOR PADRAO: 0
+TIPO: INT | TAMANHO: 32 BITS | VALORES: -2147483648 A 2147483647 | VALOR PADRAO: 0
+TIPO: LONG | TAMANHO: 64 BITS | VALORES: -9223372036854770000 A 9223372036854770000 | VALOR PADRAO: 0L
+
+2- TIPOS NUMERICOS COM PONTOS FLUTUANTES:
+TIPO: FLOAT | TAMANHO: 32 BITS | VALORES: -1,4024E-37 A 3,4028E+38 | VALOR PADRAO: 0.0f
+TIPO: DOUBLE | TAMANHO: 64 BITS | VALORES: -4,94E-307 A 1,79E+308 | VALOR PADRAO: 0.0
+
+3- UM CARACTERE UNICODE:
+TIPO: CHAR | TAMANHO: 16 BITS | VALORES: '\u0000' A '\uFFFF' | VALOR PADRAO: '\u0000'
+
+4- VALOR VERDADE:
+TIPO: BOLEAN | TAMANHO: 1 BIT | VALORES: {FALSE, TRUE} | VALOR PADRAO: FALSE
+
+5- STRING:
+TIPO: CADEIA DE CARACTERES (PALAVRAS OU TEXTO)
+
+Os valor do tamanho de cada tipo de variavel, ou seja, a quantidade de bits representa a quantidade possiveis de valores diferentes que o tipo de variavel pode armazernar.
+Isso porque 1 bit pode armazeanar 2 valores possiveis 0 ou 1, ou seja 2 possibilidades de valores para cada bit, por exemplo:
+
+8 BITS, COMO CADA BIT TEM 2 POSSIBILIDADES, BASTA MULTIPLICAR 2*2 8 VEZES, QUE NO RESULTARA EM 2^8 QUE RESULTARA EM 256 POSSIBILIDADES, POREM COMO OS VALORES INTEIROS SAO POSITIVO E NEGATIVO, TEMOS QUE DIVIDIR ESSAS 256 POSSIBILIDADES POR 2, ONDE METADE E NUMEROS POSITIVOS E METADE NUMEROS NEGATIVOS
+
+DICAS PARA DECLARACAO DE VARIAVIES:
+1- NAO DEVE COMOCER COM UM DIGITO NUMERICO, DEVEMOS COMECAR COM UMA LETRA OU _ 
+2- NAO PODE TER ESPACO EM BRANCO
+3- NAO USAR ACENTOS
+4- UTILIZE O CAMEL CASE EM CASO DE PALAVRAS COMPOSTA QUANDO TROCAR A PALAVRA COLOCA A PRIMEIRA LETRA MAIUSCULA, EX: int salarioDoFuncionario
+5- DEFINA NOMES QUE FACAM SENTIDO PARA NAO FICAR PERDIDO
+
+Um programa de computador e capaz de realizar essencialmente tres operacoes basicas, que sao:
+
+1- ENTRADA DE DADOS -> E QUANDO O USUARIO INFORMA DADOS PARA OS PROGRAMAS, ESSES DADOS QUE SAO INFORMADOS VAO SER ARMAZENADOS DENTRO DAS VARIAVEIS DO PROGRAMA, ESSES DADOS SAO INFORMADOS ATRAVES DE DISPOSITIVOS DE ENTRADA, COMO POR EXEMPLO UM TECLADO ONDE O USUARIO INFORMA SEU NOME, ESSA OPERACAO TAMBEM E CHAMADA DE LEITURA DE DADOS, VISTO QUE O PROGRAMA TAMBEM ESTA LENDO OS DADOS
+2- PROCESSAMENTO DE DADOS -> E QUANDO O PROGRAMA REALIZA OS CALCULOS, PODEMOS DESTACAR TAMBEM QUE O PROCESSAMENTO DE DADOS OCORRE DENTRO DO PROCESSADOR, ONDE O PROCESSAENTO DE DADOS SE DA POR UM COMANDO CHAMADO ATRIBUICAO, ONDE UMA CERTA VARIAVEL VAI RECEBER UMA CERTA EXPRESSAO
+3- SAIDA DE DADOS -> E QUANDO O PROGRAMA QUER MOSTRAR ALGO AO USUARIO, COM ISSO PODEMOS AFIRMAR QUE O PROGRAMA UTILIZA DISPOSITIVOS DE SAIDA COMO POR EXEMPLO O MONITOR PARA EXIBIR ALGUMA INFORMCAO AO USUARIO, ESSA OPERACAO RECEBE O NOME DE ESCRITA, POIS O PROGRAMA ESTA ESCREVENDO ALGO
+
+Para escrevermos algo na tela, neste caso no console utilizando a linguageum java, utilizamo os seguintes comandos:
+
+1- SEM QUEBRA DE LINHA
+System.out.print("Bom Dia!!");
+
+2- COM QUEBRA DE LINHA
+System.out.println("Bom Dia!!");
+
+Para escrevermos algo na tela, o conteudo de uma variavel no console utilizando a linguagem java, iremos utilizar o seguinte comando:
+
+1- PARA TIPO INTEIROS:
+int y=32;
+System.out.println(y);
+
+2- PARA TIPO FLUTUANTES:
+double x=10.35784;
+System.out.println(y); (MOSTRA O NUMERO COM TODAS AS CASAS NUMERICAS QUE O MESMO POSSUIR)
+System.out.printf("%.2f%n", x); (MOSTRA 2 CASAS APOS O PONTO)
+System.out.printf("%.4f"n", x); (MOSTRA 4 CASAS APOS O PONTO)
+
+System.out.printf -> UTILIZADO PARA FORMATAR VALORES F DE FORMATADO, PODE UTILIZAR \n NO LUGAR DE %n
+PODE-SE MUDER O SEPARADOR, EM VEZ DE UTILIZAR ., CASO O COMPUTADOR NAO ESTAEJA CONFIGURADO NO PADRAO AMERICANO, ONDE OS MESMOS UTILIZAM . PARA SEPARAR CASAS DECIMAIS BASTA UTILIZAR A FUNCAO
+Locale.setDefault(Locale.US); (PARA DEFINIR A LOCALIDADE PADRAO BASEADA NOS ESTADOS UNIDOS)
+
+3- PARA CONCATENAR (JUNTAR) VARIOS ELEMENTOS EM UM MESMO COMANDO DE ESCRITA:
+REGRA VALE PARA O PRINT E PRINTL:
+elemento1 + elemento2 + elemento3 + ... + elementoN
+System.out.println("RESULTADO = " + x + " METROS");
+
+REGRA PARA O PRINTF:
+"TEXTO1 %f TEXTO2 %f TEXTO3", variavel1, variavel2
+%f = PONTO FLUTUANTE
+%n = QUEBRA DE LINHA
+System.out.printf("RESULTADO = %.2f METROS%n", x);
+
+4- PARA CONCATENAR VARIOS ELEMENTOS EM UM MESMO COMANDO DE ESCRITA:
+REGRA DO PRINTF:
+"TEXTO1 %f TEXTO2 %f TEXTO3", variavel1, variavel2
+%f = PONTO FLUTUANTE
+%n = QUEBRA DE LINHA
+%d = INTEIRO
+%s = TEXTO
+String nome = "Maria";
+int idade = 31;
+double renda = 4000.0;
+System.out.printf("%s TEM %d ANOS E GANHA R$ %.2f%n", nome, idade, renda);
+Para comentar em Java utiliza-se \\
+
+O processamento de dados e feito atraves do comando de atribuicao e para isso, devemos seguir uma regra de sintaxe para que esse comando de atribuicao seja executado com sucesso, abaixo podemos ver a sua sintaxe.
+SINTAXE:
+<variavel> = <expressao>
+Com isso podemos dizer que a variavel ira ler ou receber o resultado de uma determinada expressao, com isso podemos dizer que a variavel a esquerda ira receber uma atribuicao do valor de uma determinada expressao
+
+EX01:
+int x, y;
+x = 5;
+y = 2*x; (VALOR DE Y=10)
+System.out.println(x);
+System.out.println(y);
+
+EX02:
+int x;
+double y;
+x = 5;
+y = 2*x; (VALOR DE Y=10.0)
+System.out.println(x);
+System.out.println(y);
+
+EX03:
+double b, B, h, area;
+b = 6.0;
+B = 8.0;
+h = 5.0;
+area = (b + B) / 2.0 * h;
+System.out.println(area);
+
+SEMPRE INDICA O TIPO DO NUMERO QUE TA USANDO, POIS DOUBLE E FLOAT POSSUEM ALGUMAS DIFERENCAS EM SUA DECLARACAO, PARA FICAR MAIS FACIL DE SABER QUAL O TIPO DE VARIAVEL ESTA MANIPULANDO, ESSAS DIFERENCAS NAS DECLARACOES SAO:
+
+1- DOUBLE:
+b = 6.0;
+B = 8.0;
+h = 5.0;
+area = (b + B) / 2.0 * h;
+
+2- FLOAT:
+b = 6f;
+B = 8f;
+h = 5f;
+area = (b + B) / 2f * h;
+
+ NAO E OBRIGATORIO, MAS PODE TER PROBLEMA EM ALGUM CASO ESPECIFICO. 
+
+EX04:
+int a, b;
+double resultado;
+a = 5;
+b = 2;
+resultado = a / b;
+System.out.println(resultado);
+
+DEU 2 POIS AS VARIAVEIS A E B SAO INTEIRA, FAZENDO COM QUE O INTERPRETADOR DA LINGUAGEM JAVA INTEPRETE COMO UMA DIVISAO DE NUMEROS INTEIROS, FAZENDO COM QUE SEJA ARREDONDADO O VALOR PARA 2 NESTE CASO, PARA RESOLVERMOS ESSE PROBLEMA BASTA UTILIZAR O CASTING, QUE IRA FUNCIONAR DA SEGUINTE FORMA
+int a, b;
+double resultado;
+a = 5;
+b = 2;
+resultado = (double) a / b;
+System.out.println(resultado);
+
+ONDE O O DOUBLE IRA FAZER O CASTING, CONVERTENDO DE INTEIRO PARA FLOAT.
+CASTING E A CONVERSAO EXPLICITA DE UM TIPO DE VARIAVEL PARA OUTRO, E NECESSARIO QUANDO O COMPILADOR NAO E CAPAZ DE ADVINHAR QUE O RESULTADO DA EXPRESSAO DEVE SER DE OUTRO TIPO
+
+EX05:
+double a;
+int b;
+a = 5.0;
+b = a;
+System.out.println(b);
+
+HA UM ERRO, POIS NAO E POSSIVEL ALOCAR UM VALOR FLUTUANTE MESMO QUE INTEIRO COMO 5.0 EM UMA VARIAVEL INTEIRA, PARA SER POSSIVEL DEVEMOS UTILIZAR CASTING QUE IRA CONVERTER ESSE NUMERO FLUTUANTE PARA INTEIRO COMO PODEMOS VER ABAIXO
+double a;
+int b;
+a = 5.0;
+b = (int) a;
+System.out.println(b);
+
+Entrada de dados e quando o usuario informa dados ao programa e armazena essas entradas nas variaveis, essas entrada de dados sao feitas atravez de dispositivos de entradas como o teclado por exemplo, a entrada de dados tambem e chamada de leitura de dadaos, onde por exemplo temos uma variavel no programa chamada de x, e o usuario digita 32 e aperta enter, isso faz com que a entrada que o usuario digitou seja 32 e esse valor sera armazenado na variavel x na memoria RAM.
+Para podermos realizar as entradas de dados em java, devemos cria um objeto do tipo Scanner, onde esse objeto do tipo Scnnaer e delcarado e iniciada do seguinte modo:
+Scanner sc = new Scanner(System.in);
+
+Onde a variavel vai receber o nome de sc, que a mesma e do tipo scanner, que e um tipo especial do Java para entrada de dados.
+Deve-se importar a bilbiotaca Scanner do java com o seguinte comando import java.util.Scanner e deve-se utilizar o sc.close quando nao pressiar mais do objeto, geralmente o mesmo e fechado ao final do codigo.
+Com isso, para conseguirmos realizar a leitura de dados em Java e alocarmos em uma variavel devemos fazer o seguinte:
+
+1- LEITURA DE PALAVRA (TEXTO SEM ESPACO):
+String x;
+x = sc.next();
+
+O PROGRAMA FICA ESPERANDO A ENTRADA DO USUARIO, ENQUANTO O USUARIO NAO DIGITAR O MESMO ESTARA ESPERANDO A ENTRADA
+
+2- LEITURA DE UM NUMERO INTEIRO:
+int x;
+x = sc.nextInt();
+
+NEXTINT RECEBE UM VALOR INTEIRO DO USUARIO
+
+3- LEITURA DE UM NUMERO FLUTUANTE:
+double x;
+x = sc.nextDouble();
+
+NEXTDOUBLE RECEBE UM VALOR FLUTUANTE DO USUARIO
+
+CASO O COMPUTADOR ESTEJA EM OUTRA LINGUAGEM COMO PORTUGUES, ONDE O SISTEMA DECIMAL ADOTA VIRGULA, E DESEJA FAZE ENTRADA COMO PONTO DEVE-SE USAR O LOCALE ANTES DO SCANNER
+PRINTLN E PRINT POSSUEM LOCALIDADES PADRAO DO US, CASO QUEIRA MOSTRA O SEPARADOR DECIMAL PADRAO DE SUA MAQUINA DEVE-SE UTILIZAR O PRINTF 
+
+4- LEITURA DE 1 CARACTER:
+char x;
+x = sc.next().charAt(0);
+
+NO EXEMPLO ACIMA, PARECE MUITO COM O DE DIGITAR UMA PALAVRA SEM ESPACO, POREM O CHARAT(0) FAZ COM QUE PEGUE APENAS A PRIMEIRA LETRA, NAO IMPORTANDO SE DIGITA UMA PALAVRA INTEIRA
+
+5- LER VARIOS DADOS NA MESMA LINHA:
+string x;
+int y;
+double z;
+x = sc.next();
+y = sc.nextInt();
+z = sc.nextDouble();
+
+BASTA CHAMAR O TIPO CORRESPONDENTE
+
+6- PARA LER UM TEXTO ATE A QUEBRA DE LINHA:
+String s1, s2, s3;
+s1 = sc.nextLine();
+s2 = sc.nextLine();
+s3 = sc.nextLine();
+System.out.println("DADOS DIGITADOS:");
+System.out.println(s1);
+System.out.println(s2);
+System.out.println(s3);
+
+PEGA TUDO O QUE FOR DIGITADO ATE O USUARIO APERTAR ENTER, DEVE SE UTILIZAR TAMBEM O NEXTLINE, SE UITLIZAR APENAS O NEXT ELE VAI PEGAR APENAS A 1 PALAVRA E NAO A FRASE TODA
+
+7- QUEBRA DE LINHA PENDENTE
+int x;
+String s1, s2, s3;
+x = sc.nextInt();
+s1 = sc.nextLine();
+s2 = sc.nextLine();
+s3 = sc.nextLine();
+System.out.println("DADOS DIGITADOS:");
+System.out.println(x);
+System.out.println(s1);
+System.out.println(s2);
+System.out.println(s3);
+
+OCORRE QUANDO LEMOS ALGUM TIPO DIFERENTE DE STRING, FAZENDO COM QUE AO APERTAR ENTER, PEGUE ESSE COMANDO NA LEITURA DA LINHA QUE ESTA A SEGUIR, DEVIDO A QUEBRA DE LINHA QUE FOI GERADA QUANDO O USUARIO APERTOU ENTER PARA DA A ENTRADA DE UM DADO INTEIRO, FAZENDO COM QUE PEGUE LIXO E ALOQUE ESSA QUEBRA DE LINHA NA VARIAVEL.
+PARA RESOLVER ISSO PASTA DAR UM SC.NEXTLINE() PARA QUE NAO TENHA NENHUMA QUEBRA DE LINHA PENDENTE, FAZENDO COM QUE FIQUE CORRIGIDO ASSIM
+int x;
+String s1, s2, s3;
+x = sc.nextInt();
+sc.nextLine();
+s1 = sc.nextLine();
+s2 = sc.nextLine();
+s3 = sc.nextLine();
+System.out.println("DADOS DIGITADOS:");
+System.out.println(x);
+System.out.println(s1);
+System.out.println(s2);
+System.out.println(s3);
+
+Funcoes Matematica do Java:
+
+1- RAIZ QUADRADA
+A = Math.sqrt(x);
+A VARIAVEL A RECEBE A RAIZ QUADRADE DE X
+
+2- POTENCIA
+A = Math.pow(x, y);
+A VARIAVEL A RECEBE O RESULTADE DE X ELEVADO A Y
+
+3- VALOR ABSOLUTO
+A = Math.abs(x); 
+A VARIAVEL A RECEBE O VALOR ABSOLUTO DE X (TIRAR SINAL NEGATIVO)
+
+Com isso conseguimos resovler diversas equacoes matematicas utilizando essas bibliotecas do java, fazendo com que seja um codigo pequeno e preciso, como por exemplo calcular a formula de Bhaskara em java, ficarai da seguinte maneira
+double delta, a, b, c, x1, x2;
+a = 1.0;
+b = 2.0;
+c = 3.0;
+delta = Math.pow(b, 2.0) - 4*a*c;
+x1 = (-b + Math.sqrt(delta)) / (2.0 * a);
+x2 = (-b - Math.sqrt(delta)) / (2.0 * a);
+System.out.println("Valor de delta = " + delta);
+System.out.println("Valor de x1 = " + x1);
+System.out.println("Valor de x2 = " + x2);
