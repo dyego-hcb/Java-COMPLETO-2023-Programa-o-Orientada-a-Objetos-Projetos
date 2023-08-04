@@ -39,6 +39,6 @@ A pasta "Exercícios" contém a resolução dos exercícios propostos. Praticar 
 
 ## Pasta "Resumo"
 
-O resumo completo desta aula está contido na pasta "Resumo". O arquivo detalhado em formato txt pode ser encontrado [aqui](Curso-Java-Udemy/SECOES/SECAO 04/RESUMO/RESUMO SECAO 04 - CURSO JAVA.txt). Este resumo oferece uma visão aprofundada dos tópicos abordados nesta seção do curso.
+O resumo completo desta aula está contido na pasta "Resumo". O arquivo detalhado em formato txt pode ser encontrado [aqui](/SECOES/SECAO%2004/RESUMO/RESUMO%20SECAO%2004%20-%20CURSO%20JAVA.txt). Este resumo oferece uma visão aprofundada dos tópicos abordados nesta seção do curso.
 
 Essa seção é crucial para construir uma base sólida em programação, que será utilizada nas seções seguintes do curso. Praticar os conceitos aprendidos através de exercícios é essencial para aprimorar suas habilidades em Java e programação em geral.
