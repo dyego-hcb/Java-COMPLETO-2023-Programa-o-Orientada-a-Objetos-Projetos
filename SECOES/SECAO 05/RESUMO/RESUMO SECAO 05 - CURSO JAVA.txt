@@ -1,0 +1,132 @@
+-- RESUMO SEÇÃO 05 - ESTRUTURA CONDICIONAL - DO CURSO JAVA COMPLETO 2023 PROGRAMAÇÃO ORIENTADA A OBJETOS + PROJETOS --
+
+Expressoes comparativas sao aquelas expressoes que compara uma coisa com outra e retonra um valor verdade (true ou false), por exemplo
+
+5>10 -> falso
+
+Para criarmos expressoes comparativas, temos que utiilzar os operadores comparativos, tais quais sao:
+
+1- > -> MAIOR
+2- < -> MENOR
+3- >= -> MAIOR OU IGUAL
+4- <= -> MENOR OU IGUAL
+5- == -> IGUAL
+6- != -> DIFERENTE
+
+Expressoes logicas assim como nas expressoes comparativas, quando avaliadas tambem resultaram a um resultado de um valor verdade, e seus operadores logicos sao:
+
+1- && -> E (TODAS AS CONDICOES DEVEM SER VERDADEIRAS, EXEMPLO X SER MAIOR QUE 3 E X SER MENOR QUE 10, OU SEJA X PODE SER UM NUMERO ENTRE 4 E 9)
+2- || -> OU (TODAS OU PELO MENOS UMA CONDICAO DEVE SER VERDADEIRA, EXEMPLO X SER MAIOR QUE 3 OU X SER MENOR QUE 10, NESTE CASO X PODE SER QUALQUER VALOR)
+3- ! -> NAO (NEGACAO)
+
+Estrutura condicional e uma estrutura de controle que permite definir que um certo bloco de comando sera executando dependendo de uma certa condicao, por exemplo informacoes pessoais devem ser acessadas apenas pela propria pessoa e nao por outras pessoas nao autorizadas
+Estrutura de controle nos permite criar um fluxo para direcionarmos nosso programa e permissoes tambem, dependendo se a condicao e verdadeira ou falsa
+
+Existem tres tipos de estruturas condicional, e iremos observa-lase juntamente com sua sintaxe, como podemos notar logo abaixo.
+
+1- SIMPLES:
+
+if(<condicao>)
+{
+    <comando 1>
+    <comando 2>
+}
+
+A condicao pode ser comparativa ou logica, caso seja verdadeira executa o comando 1 e 2, e caso seja falso pula o bloco.
+Em java, temos a chamada endentacao, onde tudo que esta dentro de uma estrutura fica um pouquinho mais a direita e lembre-se de utilizar chaves.
+
+2- COMPOSTA:
+
+if(<condicao>)
+{
+    <comando 1>
+    <comando 2>
+}
+else
+{
+    <comando 3>
+    <comando 4>
+}
+
+Se a condicao for verdadeira executa os comando 1 e 2, caso seja falsa executa as condicoes 3 e 4
+
+3- ENCADEAMENTO DE ESTRUTURAS CONDICIONAIS
+
+if(<condicao 1>)
+{
+    <comando 1>
+    <comando 2>
+}
+else if(<condicao 2>)
+{
+    <comando 3>
+    <comando 4>
+}
+else if(<condicao 2>)
+{
+    <comando 5>
+    <comando 6>
+}
+else (<condicao 2>)
+{
+    <comando 7>
+    <comando 8>
+}
+
+OU
+
+if(<condicao 1>)
+{
+    <comando 1>
+    <comando 2>
+}
+else
+{
+    if(<condicao 2>)
+    {
+        <comando 3>
+        <comando 4>
+    }
+    else
+    {
+        <comando 5>
+        <comando 6>
+    }
+}
+
+OBS1: PODEMOS USAR O ELSE IF POIS E A MESMA COISA DE DECLARAR UM ELSE E DEPOIS UM IF COMO NO SEGUNDO EXEMPLO ACIMA.
+OBS2: ABRI E FECHAR CHAVE MESMO COM UM COMANDO PARA PERMITIR UMA MELHOR VISUALIZACAO E ENTENDIMENTO DO CODIGO.
+
+Existem algumas sintaxes opcionais em java, tais quais sao:
+
+1- Operadores de atribuicao cumilativa e quando utilizamos a mesma variavel para receber o seu valor mais igual ou vezes ou alguma operacao matematica com outro valro exemplo a = a + b, podendo subistutir por a += b
+
+2- Switch-case e usada quand se tem varias opcoes de fluxoes a serm tratadas com base no valor de uma variavel qualquer, em vez de utilizarmos estruturas if-else encadeadas, podemos utilizar a estrutura switch-case, como entrada de 1 a 7 representando a 1 dia das semana com o switch-case o codigo fica obtenha uma melhor visibiliade para o entendimento.
+
+Sintaxe do Switch-case:
+switch ( expressão ) {
+case valor1:
+comando1
+comando2
+break;
+case valor2:
+comando3
+comando4
+break;
+default:
+comando5
+comando6
+break;
+}
+
+OBS1: E OBRIGATORIO USAR O BREAK NO FINAL DE CADA CASE PARA QUE PARE ALI QUANDO A EXPRESSAO DIGITADA CORRESPONDER O VALOR  DIGITADO.
+
+3- Expressao condicional ternaria e uma estrutura opcionao ao if-else quando se deseja decidir um valor com base em uma condicao, onde a partir da condicao, quando colocarmos um ponto de enterrogacao a frente da condicao, teremos que colocar 2 opoces de saida, uma se verdadeira, no caso o primeiro valor apos o ponto de interrogacao, dois pontos, depois o valor se for falso, deixando o codigo mais simplificado.
+
+Sintaxe da expressao condicional ternaria:
+( condição ) ? valor_se_verdadeiro : valor_se_falso
+
+4- Escopo e inicializacao o escopo de uma variavel e a regiao do programa onde a variavel e valida, em outras palavras, onde pode ser referenciada, uma variavel nao podera ser utilizada se a mesma nao tiver sido iniciada.
+Em java, se nao inciarmos a variavel o compilador nos apresenta um erro dizendo que uma variavel nao foi iniciada, com isso podemos afirmar que em JAVA devemos sempre inicar as variaveis de alguma forma, seja definindo valor, atribuindo um valor de um variavel etc.
+As variaveis devem estar dentro de um mesmo escopo, por exemplo estamos com um programa na main e criamos uma variavel dentro de um if-else, e nao fora dele, apenas dentro dele, e criamos tambem outras variveis dentro da main, onde uma delas foi utilizada para verificar alguma condicao no if-else, se tentarmos imprimir dentro do if-else o valor desta variavel ira funcionar, porem se imprimirmos fora desse if-else, nao ira funcionar e o compilador acusara um erro, mesmo iniciando a variavel dentro no if-else, porem ai e que esta o erro, a variavel foi inicializada apenas no instante em que o codigo leu o if-else e entrou dentro dele, apos sair essa variavel nao foi inicializada e por isso apresenta erro, devemos sempre manter as variaveis no mesmo escopo, ou seja, dentro de suas estruturas.
+Podemos inicializar as variaveis atraveis de if-else, pois caso seja uma opcao sera inicializada de um jeito e caso seja falso sera inicializada de outro, portanto garantindo que as variaveis sao inicializadas e criadadas no mesmo escopo.
