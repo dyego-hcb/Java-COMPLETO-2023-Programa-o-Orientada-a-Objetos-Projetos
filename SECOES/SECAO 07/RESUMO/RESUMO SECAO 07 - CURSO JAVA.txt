@@ -1,0 +1,98 @@
+-- RESUMO SEÇÃO 07 - OUTROS TOPICOS BASICOS SOBRE JAVA - DO CURSO JAVA COMPLETO 2023 PROGRAMAÇÃO ORIENTADA A OBJETOS + PROJETOS --
+
+Restricoes para nomes de variaveis:
+1- Nao pode comecar com digito, use letra ou _
+2- Nao usar acentos ou til
+3- Nao pode conter espaco em branco
+4- Utilize sempre nomes que tenham signifado
+
+Exemplos:
+
+Errado:
+int 5minutes;
+int salário;
+int salario do funcionario;
+
+Certo:
+int _5minutes;
+int salario;
+int salarioDoFuncionario;
+
+OBS: O UTIMO EXEMPLO CORRETO CONTA COM UMA TECNICA CHAMACA CAMEL CASE A PRIMEIRA LETRA MAIOR
+
+Convesoes:
+1- CamelCase: lastName
+* pacotes
+* atributos
+* metodos
+* variaveis e paramentros
+
+2- PascalCase: ProductService
+* classes
+
+OBS: * -> Referese onde e utilizado na linguagem java
+
+Operadores bitwise sao operadores que realizam operacoes logicas bit a bit em valores, esses operadores sao:
+
+1- & -> Operacao "E" bit a bit
+
+C1  |C2 |C1 E C2
+F   |F  |F
+F   |V  |F
+V   |F  |F
+V   |V  |V
+
+2- | -> Operacao "OU" bit a bit
+
+C1  |C2 |C1 OU C2
+F   |F  |F
+F   |V  |V
+V   |F  |V
+V   |V  |V
+
+3- ^ -> Operacao "Ou-Exclusivo" bit a bit
+
+C1  |C2 |C1 XOR C2
+F   |F  |F
+F   |V  |V
+V   |F  |V
+V   |V  |F
+
+FAZ A VERIFICACAO BIT A BIT DE UM VALOR DE UMA VARIAVEL E VERIFICAR SE OS BITS SAO IGUAL E RETORNA UMA CADEIA DE BITS COMO RESULTADO DA COMPARACAO PODENDO RESULTAR NO MESMO VALOR DA VARIAVEL OU NAO
+OBS: ESSE TIPO DE OPERACAO E UTILIZADA QUANDO ESTAMO PROGRAMANDO EM BAIXO NIVEL, EM MICRO CONTROLADORES, ARDUINO, PROGRAMCAO DE INTERFACE CM REDE, ETC.
+UTILIZADO EM MASCARAS DE IP.
+
+Funcoes Strings:
+
+1- Formatar: 
+* toLowerCase() -> Passa tudo para minusculo
+* toUpperCase() -> Passa tudo para maaiusculo
+* trim() -> Tira os espacos nos cantos
+
+2- Recortar:
+* substring(inicio) -> recorta informando inicio
+* substring(inicio, fim) -> recorta informando inicio e fim
+
+3- Substituir:
+* replace(char, char) -> troca um caracter especifico por outro
+* replace(string, string) -> troca uma string por outra
+
+4- Buscar:
+* indexOf() -> pega o indice da primeira ocorrencia de uma determinada palavra
+* LastIndexOf() -> pega o ultimo indice de ocorrencia de uma determinada palavra
+
+5- Split 
+* srt.Split(" ") -> recortar a string com base um separador
+
+Comentarios basico em JAVA sao feitos atraves do comentario de linha // ou  comentario de bloco /* */
+E bom comentar o codigo, porem nao muito pois o codigo fica muito e acaba ocupando mais espaco de comentarios que codigo
+
+Funcoes: 
+Representam um processamento que possui um significado, como por exemplos as funcoes da biblioteca Math do java, como por exemplo a Math.sqrt(double) que a raiz quadrada de um elemento, podemos obter o resultado dessa conta apenas chamando o Math.sqrt, o System.out.println tambem e uma funcao que nos permite imprimir coisas na toLowerCase
+Utilizacao de funcoes possui algumas vantagens como modularicao divide em varias partes, delegacao delega a logica a um outro lugar deixando o codigo mais enxuto, e reaproveitamento pode chamar varias e varias vezes
+As funcoes podem recber dados de entradas que serao denomidados de parametros ou argumentos
+As funcoes podem ou nao retornar uma saida, no caso do println que so mostra na tela
+No conceito de POO, funcoes sao chamadas de metodos
+
+Devemos criar as funcoes com os prefixos public static para que com o prefixo public fique disponivel para todas as classes e o static faz com que ela possa ser chamada independente de se criar um objeto, feito isso devemos delcarar se a funcao retorna alguma coisa ou nao, para isso devemos declarar o tipo de retorno, se e int, double, string, etc, ou se nao retorna nada colocamos o retorno como void
+Variaveis declardas dentro da funcao funcionam da mesma maneira que variaveis declaradas no if, elas sao destruidas quando a execucao e finalizada
