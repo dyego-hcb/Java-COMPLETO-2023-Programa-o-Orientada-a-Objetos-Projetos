@@ -1,0 +1,105 @@
+-- RESUMO SEÇÃO 06 - ESTRUTURA REPETITIVAS - DO CURSO JAVA COMPLETO 2023 PROGRAMAÇÃO ORIENTADA A OBJETOS + PROJETOS --
+
+Assunto importante na programcao, devido ao uso constante de estuturas repetitivas no dia a dia na programcao.
+
+Utilizar o DEBUG e muito importante, pois executamos passo a passo o programa, fazendo com que seja possivel acompanhar qual o valor de uma determinada variavel em um certo momento, e muito utilizado para encontrar possiveis erros de saida por exemplo de dada uma condicao verdadeira, deve-se retornar o valor 5 e retorna o valor 32, com o debug podemos executar passo a passo para que seja possivel ver aonde esta acontecendo essa atribuicao de 32 enao de 5 naquela variavel.
+Para utiliazr o debug no eclipse, devemos seguir o seguinte passo a passo:
+
+1- Marca uma linha de breakpoint e executar o comando run -> toggle breakpoint, faznedo com que o programa rode ate um determinado ponto e depois fica na espera de uma acao do usuario, como pular para a proxima linha
+2- Iniciar o debug devemos clickar com o botao direito na classde -> Debug as -> Java Application
+3- PAra executar uma linha ou pular para proxima linha apertamos a tecla F6 ou step over
+4- Para interromper o debug basta clickar no quadradinha vermelho no console.
+
+OBS: AO ENTRAR NA PESPECTIVA DO DEBUG, O ECPLISE EM SUA FINALIZACAO O MESMO NAO VOLTA A PESPECTIVA DO JAVA DEVEMOS CLICAR NO BOTAO DE PESPECTIVA DO JAVA
+
+Estrutura repetitiva While (enquanto) e uma estrutra de controlo que ira repetir um bloco de comandos enquanto uma condicao for verdadeira, a baixo iremos mostrar um exemplo:
+Exemplo:
+Por exemplo, um program que le numeros inteiros ate que o numero ZERO seja digitado uma unica vez, ao final mostrar a soma dos numeros lidos
+Entrada: 5 2 4 0 
+Saida: 11 Pois (5+2+4) -> (7+4) -> 11
+
+Deve ser utilizado quando nao se sabe previamente a quantidade de repeticoes a ser realizada, como podemos ver no exemplo acima, deve-se executar ate que o numero zero seja digitado e apos isso somar todos os numeros, com isso nao sabemos a quantidade de numeros de repeticoes que sera realizada.
+
+Sua estrutura e bastante semelhante a do if, porem possui uma caracteristica diferente que ela ira repetir tudo que esta dentro de seu conteudo ou chaves ate que a condicao seja falsa, como no exemplo acima ate que x seja diferente de zero, entao se for diferente e verdadeiro e continua executando, se for falso x e igual a 0 entao sai do while, e no if else repete apenas uma vez, abaixo veja a sintaxe do while.
+Sintaxe do While:
+while(condicao)
+{
+    comando 1
+    comando 2
+}
+
+TESTES DE MESA MANUAL -> Consiste em acompanhar um trecho de codigo manualmente e escrever a mao o passo a passo que esta acontecendo no codigo, como no debug porem nesse caso iremos fazer na mao e descrevendo o que vai acontecer com a variavel e o que mostra na tela do computador, iremos mostrar alguns exemplso aqui:
+
+EXEMPLO 01:
+
+X = 0;
+Y = 4;
+
+while(x<3)
+{
+    y = y+2;
+    x = x+1;
+    System.out.print(x + " - " + y);
+}
+
+X = {0} {1} {2} {3}
+Y = {4} {6} {8} {10}
+WHILE = {V} {V} {V} {F}
+TELA = {1 - 6} {2 - 8} {3 - 10}
+
+OBS: CADA {} CORRESPONDE A UMA EXECUCAO DA LINHA
+
+FORAM PROPOSTOS ALGUMS EXERCICOS, OS MESMOS ESTAO NA PASTA EXERCICIOS DE TESTE DE MESA NO ARQUIVO EXERCICOS_TESTE_DE_MESA_SC06.txt
+
+Estrutura repetitira for (para) e uma estrutra de controle que repete um bloco de comando para um certo intervalo de valores, por exemplo um programa que le um valor inteiro N e depois N numeros inteiros ao final mostra a soma de dos N numeros lidos, com isso o programa ira repeter N vezes a solictacao de entrada ao usuario, por exemplo:
+Exemplo 01:
+Entrada: 3 5 2 4
+Saida: 11
+
+A primeria entrada corresponte a N numeros inteiros a serem entrados, neste caso serao 3, fazendo com que ao usar a estrutra para, repita ate N vezes neste caso 3x a entrada de 3 numeros e some a uma variavel soma, que nesta entrada de 5 2 e 4 resultara na soma 11.
+
+A estrura FOR e utilizada quando se sabe previamente a quantidade de repeticoes ou o intervalo de valores, como no caso acima, o usuario informa aquantidade de entradas que serao feitas, e com isso o laco de repeticao for repete exatamente a quantidade de repeticoes proposta pelo usuario.
+A sintaxe da estrutura for e a seguinte:
+
+for(inicio ; condicao; incremento)
+{
+    comando 1;
+    comando 2;
+}
+
+OBS1: O INICIO EXECUTA NA PRIMEIRA VEZ GERALMENTE INICALIZADO EM 0, DEPOIS VERIFICA A CONDICAO SE E VERDADEIRO, FAZ IGUAL NO WHILE EXECUTA NOVAMENTE ATE QUE A CONDICAO SEJA FALAS, DEPOIS TEM O INCREMENTO QUE EXECUTA TODA A VEZ QUE A CONDICAO FOR VERDADEIRA GERELAMENTE INCREMENTADO DE 1 EM 1.
+OBS2: O INCREMENTO TAMBEM PODE SER DECREMENTO, ONDE O INICIO IRA RECEBER UM VALOR POR EXEMPLO 5, E A CONDICAO DE PARADA E I = 0, COM ISSO I INICIALIZANDO EM 5 DEVEMOS USAR O INCREMENTO QUE E DE 1 EM 1 GERALMENTE.
+
+TESTES DE MESA MANUAL -> Consiste em acompanhar um trecho de codigo manualmente e escrever a mao o passo a passo que esta acontecendo no codigo, como no debug porem nesse caso iremos fazer na mao e descrevendo o que vai acontecer com a variavel e o que mostra na tela do computador, iremos mostrar alguns exemplso aqui:
+EXEMPLO 01:
+
+X = 3;
+Y = 0;
+FOR(INT I=0; I<X; I++)
+{
+    System.out.println(I + ",");
+    Y = Y+5;
+    System.out.println(Y);
+}
+
+X = {3}
+Y = {0} {5} {10} {15}
+I = {0} {1} {2} {3}
+FOR = {V} {V} {V} {F}
+TELA = {0,5} {1,10} {2,15}
+
+OBS: CADA {} CORRESPONDE A UMA EXECUCAO DA LINHA
+
+FORAM PROPOSTOS ALGUMS EXERCICOS, OS MESMOS ESTAO NA PASTA EXERCICIOS DE TESTE DE MESA NO ARQUIVO EXERCICOS_TESTE_DE_MESA_SC06.txt
+
+Tambem temos a estrutura do while (faca enquanto), essa estrutra de repeticao e menos utilizada, porem el alguns casos se encaixa melhor ao problema, obloco de comandos executa pelo menos uma vez pois a condicao e verificada no final, semelhante ao while, podem temos a clausa do que ira realizar essa acao antes de vericiar, como por exempo uma variavel x o usuario digita o valor se for diferente de 0 continua executando, caso seja igual a zero sai da estrutura de repeticao.
+Sua sintexe abaixo:
+
+do
+{
+    comando 1;
+    comando 2;
+}while (condicao);
+
+Onde se a condicao for verdadeira, voltar para o do e repete novamente ate que a condicao seja falsa, como por exemplo o usuario entra com um numero igual a zero para sair dessa estruta de repeticao se o numero for diferente e verdadeira a condicao entao pede novamente ao usuario a entrada, ate que essa entrada seja 0.
+Muito usado em menus.
