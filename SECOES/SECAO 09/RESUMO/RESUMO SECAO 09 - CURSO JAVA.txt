@@ -1,0 +1,73 @@
+-- RESUMO SEÇÃO 09 - CONSTRUTORES, PALAVRA THIS, SOBRECARGA, ENCAPSULAMENTO - DO CURSO JAVA COMPLETO 2023 PROGRAMAÇÃO ORIENTADA A OBJETOS + PROJETOS --
+
+Nessa secao iremos ver outras tecnicas mais especificas da programacao orientada a objetos, como construtures, como executar algo no momento da instanciacao de objetos, e tecnicas de sobrecargas e encapsulamento, onde o encapsulamento, como veremos posteriormente e um dos pilares da programcao orientada a objeto, juntamente com heranca e polimorfismo.
+
+1- Construtor -> e uma operacao especial da classe que executa no momento da instanciacao do objeto, ou seja, quando damos o comando new
+Uso comuns:
+1- Iniciar valores dos atributos
+2- PErmitir ou obrigar que o objeto receba dados/dependencias no momento de sua instanciacao(injecao de dependencia)
+
+Se um construtor customizada nao for especificado, a classe disponibiliza um construturo por padrao
+Ex: Product p = new Product();
+
+E possivel especificar mais de um construtor na mesma classe (sobrecarga)
+
+Modificar construtures e preciso para que possamos evitar a existencias de objetos que necessitam obrigatoriamente de estarem preenchidos, nao podem possuir valores nulos, com isso um construtor modificado faz com que seja o usuario seja obrigado a cadastrar todos os dados do objeto ou apenas os necessario.
+No construtor devemos seguir a seguinte sintaxe:
+public NomeClasse(tipo nomeVar1, tipo nomeVar2)
+{
+    this.nomeVar1 = nomeVar1;
+    this.nomeVa2 = nomeVar2;
+}
+Para criar um objerto
+NomeClasse n1 = new NomeClasse(nomeVar1, nomeVar2)
+
+Onde a palavra this como comentamos em algumas aulas anteriores, faz com que a classe intreperte que aquele elemento da prorpia classe vai recebe o valor de uma variavel ou realizar alguma acao.
+
+Isso fara com que o usuario seja obrigado a ja entrar com os valores do objeto para que seja possivel criar um objeto de um determinado tipo.
+
+2- Palavra This -> serve para diferenciar o parametro do objeto do proprio construtor, ou seja, referencia para o proprio objeto
+Usos comuns:
+- diferenciar atribuitos de variaveis locais, na memoria e criado um escopo do contrutor, cada caixinha corresponde a um atributo do construtor, e os mesmos sao nomeados de acordo com os nomes dados no construto, a palavra this, faz com que esses valores que estao no escopo do construtor sejam copiadaos para um objeto do tipo prodcut, como no exemplo de aula, a palavra this.nomeVar refere-se ao campo do objeto 
+- passar o proprio objeto como argumento na chamda de um metodo ou contrutor.
+
+OBS1: NAO E NECESSARIO UTILIZAR A PALAVRA THIS QUANDO NAO HA UM ATRIBUTO COM O MESMO NOME NO CONSTRUTOR
+
+3- SOBRECARGA e um recurso que uma classe possui de oferecer mais de uma operacao com o mesmo nome, porem com diferentes listas de paramentros, como vimos anteriormente os construtores, onde podemos ter n construtores com parametros diferentes.
+Outro exemplo um construtor padrao sem parametro e um contrutor modficado com parametros.
+
+4- ENCAPSULAMENTO e um principio que consiste em esconder detalhes de implmentacao de uma classe, expondo apenas operacoes seguras e que mantenham os objetos em um estado consistente.
+Regra de Ouro: o objeto deve sempre estar em um estado consistente e a propria casse deve garantir isso.
+Por exemplo:
+Aparelo de som, o mesmo tem varios circuitos varios conexoes e operacoes acontecendo la dentro, so que o usuario, nao pode ter acesso a essas coisas, pois o mesmo pode corromper a integridade do aparelho, entao o aparelho de som deixa apenas disponivel aquilo que o usuario somente pode fazer como colocar o cd, troca de muscia, etc.
+
+Para implementarmos isso em java, temos uma regra geral basica que e:
+Um objeto NAO deve expor nenhum atributo(modificador de acesso private, as classes que criamos primeiramente possuiam modificador de acesso public), fazendo que nao seja possivel qualquer arquivo acessar e modificar os atributos de um objeto.
+Para acessarmos os atributos, devemos utilizar os metodos get e set, get para obter o conteudo do atributo e set para definir um valor ao atributo.
+O texto acima corresponde aos padroes java beans
+
+Sintaxe do get e set:
+
+GET:
+public tipo getNomeAtributo()
+{
+    return nomeAtributo;
+}
+SET:
+public void setNomeAtributo(tipo nomeAtributo)
+{
+    this.nomeAtributo = nomeAtributo;
+}
+
+OBS1: METODOS GET E SET SO SERAO CRIADOS SE NECESSARIO, PODE HAVER ATRIBUTOS QUE UTILIZEM APENAS SO UM OU NENHUM DOS DOIS
+
+Podemos gerar os metodos construtures automaticamente no eclipse basta clickar com o botao direito na classe -> source -> gereate constructor using fields
+Podemos gerar os metodos get e set automaticamente no eclipse basta clickar com o botao direito na classe -> source -> gereate getters and setters
+
+OBS: No construtor gerado automaticamente, ele cria uma chamada do super, onde o mesmo sera utilizado se a classe for uma subclasse de outra classe, atraves de heranca que sera visto posteriormente
+
+Modificadores de acesso -> existem 4 tipos de modificadores de acessos que sao:
+1- private: o membro so pode ser acessado na propria classe, por exemplo temos na classe main a instancia de um objeto e tentamos printar o seu atributo, nao funcionara pois o mesmo e protegido e so e acessado pela propria classe, entao e necessario o uso do get para obtermos a informacao sobre um determinado atributo privado de uma classe
+2- (nada): o membro so pode ser acessado nas classes do mesmo pacote, se estiver no mesmo pacote, e possivel atraves de uma instancia o atributo que nao tiver nada antes do seu tipo, somente SE ESTIVER NO MESMO PACOTE e possivel acessar esse atributo, se nao e necessario o uso de get igual no exemplo acima
+3- protected: o membro so pode ser acessado no mesmo pacote, bem como em subclasses de pacotes diferentes, funciona a descricao acima, so que pode ser acessado em diferente pacotes desde que seja subclasses
+4- public: o membro e acessado por todas as classes(ao meenos que ele resida em um modulo diferente que nao exporte o pacote onde ele esta).
