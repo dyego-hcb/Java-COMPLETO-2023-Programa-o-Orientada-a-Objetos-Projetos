@@ -1,0 +1,112 @@
+-- RESUMO SEÇÃO 08 - INTRODUÇÃO Á PROGRAMAÇÃO ORIENTADA A OBJETOS - DO CURSO JAVA COMPLETO 2023 PROGRAMAÇÃO ORIENTADA A OBJETOS + PROJETOS --
+
+Devemos separar as classes em pacotes, para que fique mais organizado a estrutura do projeto, cada pacote tera sua finalidade, como por exemplo um pacote chamado entities onde no mesmos sera adicionado os arquivos java da classe que representa uma entidade, por exemplo uma figura geometrica.
+
+Como no exemplo da video aula, estavamos representando o triangulo por meio das variaveis xA, yA, ..., podemos melhorar isso criando uma classe que representara o objeto triangulo, onde essa classe contara com 3 atributos a b c, que sao os lados do triangulo como fizemos na resolucao sem orientacao a objetos.
+Com isso tivemos que criar 6 variaveis para representar os 2 triangulos, utilizando a classe, iremos ter apenas 2 objetos que vao ser alocados a 2 variaveis, diminuindo a aqunatidade de variaveis em nosso codigo grotescamente, deixando apenas 2 variaveis para instanciarmos um objeto triangulo
+
+A classe e um tipo estruturado que pode conter:
+1- Atributos que sao os dados que compoe o objeto
+2- Metodos que sao funcoes ou operacoes que essa classe executa
+
+Classes nao e apenas um tipo estruturado, ela tambem podem prover muitos outros recursos como:
+1- Contrtures
+2- Sobrecarga
+3- Encapsulamento
+4- Heranca
+5- Polimorfismo
+
+Exemplos de coisas que podem ser representadas por classes e quais sao seus servicos, utilitarios e outros tipos de classes:
+Entidades:
+1- PRoduto
+2- Cliente
+3- triangulo
+
+Servicos:
+1- ProductService
+2- ClienteService
+3- EmailService
+4- StorageService
+
+Utilitarios:
+1- Calculadora
+2- Compactador
+
+Outros:
+1- Views
+2- Repositorios
+3- Gerenciadores
+4- etc.
+
+Para criarmos uma classe, utilizamos a seguinte sintaxe:
+
+package entities;
+
+public class Triangle
+{
+    public double a;
+    public double b;
+    public double c;
+}
+
+O public faz com que seja possivel realizar o acesso por meio de outro arquivo, por exemplo a classe main chama alguma funcao da classe trinagulo, caso estivesse como o outro metodo de encapsulamento, como protect ou private, teriamos que importar o arquivo no codigo da main, igual importamos as bibliotecas java.
+OBS1: Utilizar pacote entities para entidades/objetos que sao representados na vida real.
+Com a utilizacao da classe, em vez de termos 6 variaveis para 2 triangulos, conseguimos instanciar apenas 2 objetos do tipo triangulo, fazendo com que saindo de 6 variaveis para apenas 2 e com um tipo especifico, onde os mesmos terao metodos especificos de funcionalidades.
+E necessario chamar o new ClassName() para instanciar um objeto se nao fizer isso nao inicia.
+Ao instanciarmos um objeto, podemos alterar os valores de seus atributos e chamar metodos atraves do seguinte comando:
+Levando em cosideracao o exemplo em aula que foi criado um trinagulo devemos fazer da seguinte maneira:
+Triangel x = new Triangle();
+x.
+Depois do . selecionamos qual metodo ou atributo queremos utilizar naquela linha.
+Ao utilizarmos classe, nosso codigo fica mais inxuto e deixa a main mais limpa tambem, devemos sempre fazer isso para criarmos boas praticas de programacao.
+Quando fazemos a declaracao das variaveis ela vao para uma area da memoria chama stack, essa area e onde ficam as variaveis criadas no programa, as famosas variaveis staticas.
+Utilizando o comando new, criamos uma nova alocacao dinamica na memoria, onde criamos um objeto do tipo da classe instanciada na memoria stack, e com isso e armazenado nessa memoria stack o endereco do objeto instanciado na memoria heap, que e onde os objetos dinamicos durante a execucao, dentro dessa heap, estara todos os dados do objeto, famoso contexto de ponteiro.
+
+Com a utilizacao de metodos, que sao as funcoes das classes, que no caso serao acoes especificas daquela classe, podemos reeutilizar o codigo, fazendo com que o codigo fique mais inxuto e facil de se entender.
+Para criarmos um metodo, utilizamos a seguinte sixntaxe:
+
+public tipo_retorno nomeFuncao(parementros)
+{
+    comando 1;
+    comando 2;
+    retorno;
+}
+
+Onde devemos definir o tipo de retorno, o nome, e paramentros(caso houver).
+Diagrama de classes sao utilizados para ter uma melhor visualizacao das classes, onde iremos ter todas as classes listadas com seus relacionamentos.
+
+Os beneficios de utiizar metodos, neste caso o de calcular a area de um triangulo na propria classe foram:
+1- Reaproveitamento de codigo, eliminamos o codigo repetido da area do triangulo, e deixamnos apenas uma chamada de funcao, fazendo com que o codigo da main fique o mais limpo possivel
+2- Delegacao de responsabilidades, quem deve ser responsavel por calcular a area do triangulo e a propria classe triangulo, a logica do calculo nao deve ser implementada em outro lugar, fazendo com que o programa fique bem estruturado e definido.
+
+This e uma plavra reservada que significa uma auto-referencia ao objeto, e utilizado quando o parametro possui o mesmo nome, isso faz com que a classe entenda que ira utilizar o atributo da propria classe para alguma acao.
+Toda classe em java e uma sublcasse da classe Object
+A classe Object possui os seguintes metodos:
+1- getClass retorna o tipo do objeto
+2- equals compara se um objeto e igual a outro
+3- hashCode retorna um codigo hash do objeto
+4- toString converte o objeto para string 
+
+toString serve para converter o objeto para string, devemos criar um novo metodo toString, com a sobreposicao, pois iremos sobrescrever o que ja esta definido por padrao no metodo toString da classe Objetct, como dito anteriormente, toda classe criada e uma subclasse da classe Object, e com isso podemos manipular esse meotodo toString para que seja possivel mostrar na tela um texto especifico formatado da nossa forma.
+podemos chamar tanto com o objeto criado, por exemplo igual na aula usar o prodcut apenas ou usar o product.toString
+Para definirmos casas decimais fixa no toString, devemos utilizar o meotof String.format("%.2f", varRef)
+
+Membors estaticos, tambem chamaos de membros de classe em opoiscao a membros e instanciada
+Sao membros que fazem sentido independente de objetos, nao precisam de objetos para ser chamados, podem ser chamados a partir do prorpio nome da classe
+Aplicacoes comuns:
+1- Classes utilitarios ex Math.sqrt
+2- Declaracao de constantes
+Uma classe que possui somente membos estaticos, pode ser uma classe estatica tambem, porem essa classe nao podera ser instanciada
+
+O membro statico vai dar o mesmo resultado independente de objetos diferentes.
+
+Para declaramos constantes em java fazemos da seguinte maneira:
+public static final tipo NOME_VAR = valor;
+O nome de constante deve ser sempre em caixa alta.
+
+Nao e possivel chamar um metodo nao estatico em uma classe estatica.
+Se os metodos da classe nao forem estiticos devemos instanciar um objeto, caso seja estatico basta utilizar o nome da classe.
+
+A diferencao entre membros staticos e comum:
+A operacao em membros comuns tem seu resultado alterado dependendo do valor do objeto
+A operacao em membros staticos nao mudao, por exemplo o valor do PI no exemplo foi definido como 3.14, ou seja, ele sempre tera o valor 3.14, independente do objeto.
