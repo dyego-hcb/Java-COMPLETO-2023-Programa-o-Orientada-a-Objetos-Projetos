@@ -1,0 +1,327 @@
+-- RESUMO SEÇÃO 10 - COMPORTAMENTO DE MEMORIA, ARRAYS, LISTAS - DO CURSO JAVA COMPLETO 2023 PROGRAMAÇÃO ORIENTADA A OBJETOS + PROJETOS --
+
+Nesse capitulo sera abordados fundamentos muito importantes como o comportamento das variaveis na memoria, veremos a diferenca do tipo por referencia e tipo valor, tambem veremos contexto de desalocaco de memoria, garbage collector escopo local.
+Apos finalizarmos o conteudo acima, iremos para a parte de arrays, vetores, boxing, unboxing wrapper classes, laco for each, listas e matrizes, os chamados arrays bidimensionais.
+
+Em java, as classes sao tipos referencias, ou seja, sao variaveis cujo tipo sao calsses, nao devem ser entendidas como caixas, mas sim como ponteiros para as caixas, visto que classes denotam um objeto e como vimos anteriormente, ao instanciarmos uma classe ciramos um ponteiro para um endereco da memoria onde esse objeto esta instanciado, na area da memoria chamada stack ira alocar um endereco de memoria heap, onde na memoria heap estara as caixinhas que compoe aquele objeto 
+exemplo:
+
+product p1, p2
+
+p1 = new Product(TV, 900, 0)
+p2 = p1 (PEGA O MESMO EENDERECO, P2 PASSA APONTAR PARA O ENDERECO DE P1, ONDE TEM OS DADOS DE P1)
+
+stack                 heap
+
+p1 = 2819x   ---------> 2819x = TV | 900 | 0
+p2 = 2819x  -----------> | |
+
+Valor null indica um valor nulo, ou seja, nao faz referencia a nenhum endereco na memoria heap.
+
+Tipos primitivos sao itpos valor, ou seja caixas, e nao ponteiros, como por exemplo double, int, sao armazenadas em caixinhas na memoria stack e nao uma referencia a um endereco na memoria heap.
+exemplo:
+
+double x, y
+
+x=1
+y=x;
+
+stack           heap
+
+x = 10
+y = 10
+
+Lembrando que tipos primitivos em java sao 8, tais quais sao:
+
+boolean
+char
+byte
+short
+int
+long
+float
+double
+
+E todos os tipos primitivos sao sempre caixinhas na memoria heap.
+As variaveis do tipo primitivos, ou quaisquer variaveis devem ser incializadas, se nao ha erro de nao inicializacao.
+Valores padrao e quando alocamos (Quando usamo o new) qualquer tipo estruturado (classe ou array) sao atribuidos valores padrao ao seus elementos, como:
+numeros = 0
+boolean = false
+char  = caractere codigo 0
+objeto = null
+
+Como por exmplo, temos um construturo patrao, sem argumentos passando nele, isso faz com que instanciamos um objeto inicializado como null, ou seja, por padrao quando instanciamos um objeto, de uma determinada classe que possui um construtor padrao, ele ja vem com os valores padrao alocar null em todos os seus atributos.
+exemplo
+Producot p = new Product
+
+Memoria:
+
+nome = null
+price = 0,0
+qtd = 0
+
+DIFERENCIAS ENTRE OS TIPOS REFERENCIAS E O TIPO VALOR:
+
+1- TIPOS REFERENCIAS:
+CLASSES
+VANTAGENS:
+USUFRUI DE TODOS RECURSOS ORIENTADO A OBJETOS COMO CONSTRUTOR, HERANCA, POLIMORFISMO, ETC.
+VARIAVEIS SAO PONTEIROS, APONTA PARA UM ENDERECO NA MEMORIA HEAP
+OBJETOS PRECISAO SER INSTANCIADOS USANDO O NEW OU APONTAR PARA UM OBJETO EXISTENTE
+ACEITA VALOR NULL
+Y = X (Y PASSA A APONTAR PARA ONDE X APONTA NA MEMORIA HEAP)
+OBJETOS INTANCIADS NO HEAP
+OBJETOS NAO SAO UTILIZADOS SAO DESALOCADAS EM UM MOMENTO PROXIMO PELO GARBAGE COLLECTOR, O GARBAGE COLLECTOR E UM PROCESSO DE VERIFICAR O HEAP E VERIFICA QUAIS OBJETOS ESTAO SENDO UTILIZADOS.
+
+2- TIPO VALOR
+TIPO PRIMITIVO 
+VANTAGEM:
+E MAIS SIMPLES E PERFOMATICO
+VARIAVEIS SAO CAIXAS NA STACK DA MEMORIA
+NAO INSTANCIA, UMA VEZ DECLARADOS ESTAO PRONTOS PARA USANDO
+NAO ACEITA VALOR NULL
+Y = X (Y RECEBE UMA COPIA DO VALOR DE X)
+"OBJETOS" INSTANCIADOS NA STACK DA MEMORIA
+"OBJETOS" SAO DESALOCADOS IMEDIATAMENTE QUANDO SEU ESCOPO DE EXECUCAO E FINALIZADO
+
+DESALOCACAO DE MEMORIA
+
+GARGAGE COLLECTOR E UM PROCESSO QUE AUTOMATIZA O GERENCIAMENTO DE MEMORIA DE UM PROGRAMA EM EXECUCAO, O GRABAGE COLLECTOR MONITORA OS OBJETOS ALOCADOS DINAMICAMENTEO PELO PROGRAMA NA AREA HEAP DA MEMORIA, DESALOCANDO AQUELES QUE NAO ESTAO SENDO MAIS UTILIZADOS
+EXEMPLO:
+
+p1 = new Product(TV, 900, 0)
+p2 = new Product(TV2, 1900, 0)
+
+
+stack                   heap
+p1 = 08201x --------> 08201x
+p2= 01211x ----------> 01211x
+
+p1 = p2
+
+stack                   heap
+p1 = 08201x -------->   ||
+p2= 01211x ----------> 01211x
+
+Quando um objeto fica sem referencia,o garbage collector ira desalocalo em algum momento.
+
+DESALOCACO POR ESCOPO
+
+Exemplo:
+void method01()
+{
+    int x=10;
+    if(x>0)
+    {
+        x=20;
+    }
+    sysou(x);
+}
+
+Quando executarmos o codigo acima, ira ser criado na memoria stack uma caxinha relacionada ao funcao criada acima method01, e dentro dela uma caixinah com a variavel x, assim que sua execucao terminar, essa caixa x sera destruida, pois o fim da execucao de um metodo resulta em desalocacao de variaveis do tipo de valor, primitivas
+Isso tambem serve para a variavel y, que foi criada dentro do if, criou uma caixinha dentro da caixinha do metodo01 no escopo da memoria stack e dentro dessa caixinha do if foi criada uma variavel y que recebeu o valor 20, porem ela foi destruida ao terminar a execucao do comando if, fazendo com que ocorra a desalocacao por escopom pois  o escopo ou caixinha que no qual aquela variavel exsitia foi destruido.
+Quando usamo o exmplo a baixo:
+
+void method1() {
+Product p = method2();
+System.out.println(p.Name);
+}
+Product method2() {
+Product prod = new Product("TV", 900.0, 0);
+return prod;
+}
+
+Ele ira alocar  um objeto e retorna esse objeto, ou seja ele ira criar na memoria stack um escopo do metodo um com o produto p que ira receber o enderecamento da criacao de um protudo no metodo 2, quadno fizer a chamada do metodo 2, dentro do escopo do metodo 1 sera criado um escopo para o metodo 2 e cirara uma variavel prod com o enderecamento na memoria heap de um produto e retornara o mesmo, fazendo com que p aponte para o objeto instanciado na memoria heap
+o que e instanciado no heap e mantido, por isso o objeto p conseguiu fazer referencia aquele objeto na memoria heap.
+
+VETORES:
+
+Em programcao vetor e o nome dado a arranjos unidimensionais, os arrnjos ou arrays sao uma estrutura de dados homenea (dados do mesmo tipo), ordenada (elementos sao acessados por meio de posicoes), Alocada de uma vez so, em um blcoco contiguo de memoria
+EX VETOR:
+VET[3]:
+0 -> 1.72
+1 -> 1.2
+2 -> 1.21
+
+OBS: NUMEROS INTEIROS REPRESENTAM POSICOES DOVETOR E OS NUMEROS FLUTUANTES SAO O CONTEUDO DAQUELA POSICAO
+
+Vantages: 
+Acesso imadiato aos elementos pela sua posicao
+Desvantages: 
+Possui um tamanho fixo, no caso do exemplo acima o vetor possui um tamnho 3, caso queira um array de 4 posicoes teria de alocar o array inteiro novamente e desalocar o de 3. 
+Possui uma dificuldade de ralizar insercoes e deleecoes, devido que ao remover, uma posicao fica vaga, com isso devemos pegar todos os valores das posiceos adiante e aloca-los em uma posicao anterior para cobrir o buraco.
+
+Ao instanciarmos um vetor, o mesmo funciona como um objeto, sera criado na memoria stack uma caixinha chamada vect, onde ela ira apontar para uma vetorzinho unidimencional na memoria heap, em java os vetores sao inicializados, por exemplo com o valor 0 para o vetor tipo double pois como dito anteriormente os vetores sao alocados de uma vez so em blocos contiguos na memoria.
+Para instanciar um vetor em java, fazemos da seguinte forma:
+
+Tipo[] nome_vetor = new Tipo[Tamanho];
+
+Para inserir elementos no vetor, utilizamos a seguinte sintaxe nome_vetpr[i] = entrada, onde i represta o valor da posicao do vetor, sempre incementa o i ao adicionar 1 elemento se nao adiciona sempre na mesma posicao se o valor de i nao alterar.
+OBS1 = VALE PARA CLASSE TAMBEM, POREM NA HORA DE ENTRADA PASSA UM OBJETO DO TIPO DA CLASSE
+OBS2 = TEMOS UMA DIFERENCA NO MOMENTO DA INSTANCIACAO DE UM VETOR DE TIPO PRIMITIVO E UM VETOR DE OBJETOS, CLASSES, ONDE AMBOS VETORES SAO CRIADOS NA MEMORIA STACK ONDE AMBOS APONTAM PARA UM ENDERECO NA MEMORIA HEAP, ESSE ENDERECO NA MEMORIA HEAP ESTA RELACINADO A UM BLOCO CONTIGUO DE MEMORIA, E EM VETORES DO TIPO PRIMITIVO, E APENAS ESSE BLOQUINHO, POREM QUANTO UTILIZAMOS INSTANCIAS DE OBJETOS, NA MEMORIA HEAP ESSE BLOCOQUINHO DE MEMORIA, CADA POSICAO APONTA PARA UM OBJETO NA MEMORIA HEAP
+OBS3 = OBEJETOS PEGAM OS VALORES DE SEUS ELEMENTOS ATRAVES DO .GET DEVIDO AO ENCAPSULAMENTO
+OBS4 = nome_vetor.length RETORNA O TAMANHO DO VETOR 
+OBS5 = VETORES SEMPRE COMECAM COM A POSICAO 0 ATE TAMANHO-1
+OBS6 = COLOCAR %% PARA APRECER % NO PRINT
+
+Boxing e o processo de conversao de um objeto do tipo valor para um objeto tipo referencia compativel
+EX:
+
+int x = 20;
+Object obj = x;
+
+MEMORIA:
+STACK       HEAP
+
+[20]       
+ X
+
+ obj ------>[20]
+
+OBS: CLASSE OBJ E A CLASSE MAIS GENERICA DO JAVA, PORTANTO COMPATIVEL COM QUAISQUER TIPO VALOR
+
+unboxing e o processo de conversao de um objeto do tipo referencia para um objeto tipo valor compativel:
+EX:
+
+int x = 20;
+Object obj = x;
+int y = (int)obj
+
+MEMORIA:
+STACK       HEAP
+
+[20]       
+ X
+
+obj ------>[20]
+
+[20]
+ y
+
+OBS: DEVE COLOCAR O CAST SEMPRE PARA ESPECIFICAR QUAL CONVERSAO
+
+Wrapper classes sao classes equivalente aos tipos primitivos, onde o java possui uma particularidade para cada tipo primitivo dela e tambem um tipo de classe que e compativel, por exemplo note abaixo a hieraquia de classes que sao equivalentes ao tipo primitivo
+                        Object
+                        |
+            _________________________________
+            |                   |           |
+            Number              Boolean     Character
+            |                   boolean     char
+_____________________________________________
+|       |       |           |       |       |
+Byte    Short   Integer     Long    Float   Double 
+byte    short   int         long    float   double
+
+OBS: TIPOS PRIMITIVOS SAO OS COM LETRAS MINUSCULA, TEMOS CLASSES EQUIVALENTES AOS PRIMITIVOS COMO PODEMOS VER NO DIAGRAMA assim
+
+Temos esses tipos compativos para:
+Boxing e unboxing e natural na linguagel
+Uso comum: campos de entidades de sistemas de informacao(IMPORTANTE!!)
+Pois tipos referencias classes aceitam valores nulos e usufruem dos recursos OO, como heranca, etc.
+
+Wrapper classes sao classes que possuem um objetivo de tratar os tipos primitivos como classes de uma forma transparente ao compilador.
+Podemos nao notar, mais usamos muito wrapper classes em java nos conceitos de POO, ao instanciar um atributo, utilizamos as variaveis do tipo primitivo com letra maiuscula.
+E melhor usar o wrapper classe por conta de possiveis valores nulos, como campos opicionais, por isso utiliza-se wrapper classes.
+
+
+LACO FOR EACH:
+
+E uma sintaxe opcional e simplificada para percorrer colecoes:
+SINTAXE:
+for(tipo apelido: colecao)
+{
+    <comandos>
+}
+
+Listas:
+
+A lista e uma estrutura de dados:
+1- homogenia(dados do mesmo tipo)
+2- ordenada(elementos acessados por meio de posicoes semelhante ao vetor)
+3- inicia vazia, e seus elementos sao alocados sob demanda, no vetor era diferente, nois deviamos informar quantos elementos ele tem para o mesmo se inicializar.
+4- cada elemento ocupa um no da lista
+
+EX LISTA:
+LISTA:
+0->1.71 V
+1->1.56 V
+2-> 1.80 null
+
+OBS: V E UM PONTEIRO MOSTRANDO QUE HA ELEMENTOS A FRENTE E O VALOR INTEIRO REPRESENTA A UM NODO OU NO DA LISTA E O VALOR FLUTUANTE REPRESENTA O VALOR DO CONTEUDO DAQUELE NODO
+OBS: CONCEITO DE LISTA ENCADEADA
+
+0->1.71 
+1->1.56 
+2-> 1.80
+(SIMPLIFICADO)
+ 
+Tipo de (interface e um tipo que define as epecificacoes porem nao pode ser instanciada): List
+Classes que implementam a interface List:
+1- ArrayList
+2- LinkedList
+3- etc
+
+Vantagens:
+1- tamanho variavel, diferente do vetor que tem tamanho fixo
+2- facilidade para realziar insercoes e deleecoes, e facil de remover e inserir, visto que nao ficara buracos, apenas o ponteiro aponta pra outro posicao na lista
+OBS: PODEMOS NOTAR QUE AS VANTAGENS DA LIST SAO AS DESEVANTAGENS DO VETOR
+Desvantagens:
+acesso sequencial aos elementos, pois cada no aponta para o proximo, fazendo com que a gente tenha q percorrer toda a lista, porem nem sempre e assim pois dependendo da lista ela e otimizada, como por exemplo o arraylist, ela consegue dar uma amenizada nas dificuldades de acesso.
+
+Comandos do tipo list:
+1 Tamanho da lista: size() 
+2 Obter o elemento de uma posição: get(position)
+3 Inserir elemento na lista: add(obj), add(int, obj)
+4 Remover elementos da lista: remove(obj), remove(int), removeIf(Predicate)
+5 Encontrar posição de elemento: indexOf(obj), lastIndexOf(obj)
+6 Filtrar lista com base em predicado:
+List<Integer> result = list.stream().filter(x -> x > 4).collect(Collectors.toList());
+7 Encontrar primeira ocorrência com base em predicado:
+Integer result = list.stream().filter(x -> x > 4).findFirst().orElse(null);
+
+Sintaxe de criacao de lista:
+List<Tipo> nome_list = new ArrayList<STRING>(); O STRING E OPOCIONAL
+
+- interfaces -> List e uma intreface
+- generics -> os <> que e parametrizacao de um tipo para outro tipo especificado.
+- predicados (lambda)
+
+OBS1: PARA CRIAR LISTA DE VARIAVEIS PRIMITIVAS DEVE SE UTILIZAR AS WRAPPER CLASSES DAS MESMAS
+OBS2: ARRAYLIST PQ E OTIMIZADO 
+OBS3: EM LISTAS E POSSIVEL ADD EM QUAISQUER POSSICAO QUE VOCE QUISER SEM PERDER DADOS
+OBS4: INDEXOF RETORNA -1 QUANDO NAO ENCONTRA UM ELEMENTO NO INDEXOF
+OBS5: O STREAM FILTER RETORNA UMA NOVA LISTA
+OBS6: ENCONTRAR ELEMENTO COM BASE NO PREDICADO, CASO NAO ENCONTRE RETORNA NULO
+
+Matrizes:
+
+Matriz e o nome dado a arranjos bidimensionais, ou como chamado na programacao vetor de vetores
+O arranjo e uma estrutura de dados:
+1- homogenea (do mesmo tipo)
+2- ordenada (elementos acessados por meio de posicoes)
+3- Alocada de uma vez so em um bloco contiguo de memoria, semelhante a vetores
+
+Declaramos uma matriz da seguinte maneira:
+
+Tipo [][] nome_matriz = new Tipo[Tamanho][Tamanho]
+
+EX MATRIZ:
+    0       1
+    V       V
+0> 3.5  | 17.2  |
+1> 4.1  | 6.4   |
+2> 11.0 | 3.2   |
+
+OBS: > LINHA VISTA COMO VETOR V COLUNA VISTA COMO VETOR
+
+Vantagens:
+1- Acesso imediato aos elementos pela sua posicao
+Desvantagens:
+1- Tamanho fixo
+2- Dificuldade para realizar insercoes e deleecoes
+
+OBS1: VANTAGENS E DESVANTAGENS DA MATRIZ E A MESMA DO VETOR, VISTO QUE UMA MATRIZ EUM VETOR DE VETORES
+OBS2: AO CRIAR A MATRIZ, ELA E CRIADA NA MEMORIA IGUAL AO VETOR, CRIA-SE UMA CAIXINHA COM O NOME DA MATRIX NA MEMORIA STACK, ESSA CAIXINHA FAZ REFERENCIA A UM VETOR BIDIMENCIONAL NA MEMORIA HEAP, SEMELHANTE AO VETOR, POREM COM LINHAS E COLUNAS, OU 2 VETORES
+
+.length() em matrizes corresponde ao valor da total de LINHAS
+nome_matriz[l].length() retorna o numero de COLUNAS, pois tratase de um arraybidimensional.
