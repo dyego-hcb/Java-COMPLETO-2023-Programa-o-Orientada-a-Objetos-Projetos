@@ -4,9 +4,9 @@ Este repositório contém os materiais da Seção 03 do curso "Java Completo 202
 
 ## Estrutura do Repositório
 
-- Pasta "Resumo": Contém um resumo em formato de arquivo de texto das principais informações abordadas na seção.
+- Pasta [Resumo](../SECAO%2003/RESUMO/): Contém um resumo em formato de arquivo de texto das principais informações abordadas na seção.
 
-- Pasta "Projetos": Contém os códigos dos projetos propostos durante a seção. Cada projeto está organizado em sua respectiva pasta.
+- Pasta [Projetos](../SECAO%2003/PROJETOS/): Contém os códigos dos projetos propostos durante a seção. Cada projeto está organizado em sua respectiva pasta.
 
 ## Resumo da Seção
 

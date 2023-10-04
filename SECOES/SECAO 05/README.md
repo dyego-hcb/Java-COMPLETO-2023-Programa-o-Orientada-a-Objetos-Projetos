@@ -4,9 +4,9 @@ Bem-vindo ao repositório da **Seção 05: Estrutura Condicional** do curso "Jav
 
 ## Conteúdo do Repositório
 
-- A pasta **proejtos** possui uma sub pasta chamada **exemplos**, onde contém códigos Java demonstrados nas videoaulas.
-- A pasta **proejtos** possui uma sub pasta chamada **exercicios**, onde contém exercícios práticos propostos para reforçar o aprendizado.
-- Na pasta **resumo**, você tem acesso ao resumo completo desta seção.
+- A pasta **[Projetos](../SECAO%2005/PROJETOS/)** possui uma sub pasta chamada **[Exemplos Video Aula](../SECAO%2005/PROJETOS/EXEMPLOS%20VIDEO%20AULA/)**, onde contém códigos Java demonstrados nas videoaulas.
+- A pasta **[Projetos](../SECAO%2005/PROJETOS/)** possui uma sub pasta chamada **[Exercicios](../SECAO%2005/PROJETOS/EXERCICIOS/)**, onde contém exercícios práticos propostos para reforçar o aprendizado.
+- Na pasta **[Resumo](../SECAO%2005/RESUMO/)**, você tem acesso ao resumo completo desta seção.
 
 ## Resumo da Seção: Estrutura Condicional
 

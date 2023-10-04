@@ -4,9 +4,9 @@ Bem-vindo ao repositório da **Seção 08: Introdução à Programação Orienta
 
 ## Conteúdo do Repositório
 
-- A pasta **projetos/exemplos video aula** contém códigos Java demonstrados nas videoaulas.
-- A pasta **projetos/exercicios** contém exercícios práticos propostos e realizados.
-- Na pasta **resumo**, você encontrará o resumo completo desta seção.
+- A pasta **[Exemplos Video Aula](../SECAO%2008/PROJETOS/EXEMPLOS%20VIDEO%20AULA/)** contém códigos Java demonstrados nas videoaulas.
+- A pasta **[Exercicios](../SECAO%2008/PROJETOS/EXERCICIOS/)** contém exercícios práticos propostos e realizados.
+- Na pasta **[Resumo](../SECAO%2008/RESUMO/)**, você encontrará o resumo completo desta seção.
 
 ## Resumo da Seção: Introdução à Programação Orientada a Objetos
 
@@ -50,4 +50,4 @@ A POO oferece diversos benefícios, como modularização, reutilização de cód
 
 ## Exercícios
 
-Você encontrará exemplos de códigos na pasta "projetos/exemplos video aula" e exercícios propostos na pasta "projetos/exercicios".
+Você encontrará exemplos de códigos na pasta [Exemplos Video Aula](../SECAO%2008/PROJETOS/EXEMPLOS%20VIDEO%20AULA/) e exercícios propostos na pasta [Exercicios](../SECAO%2008/PROJETOS/EXERCICIOS/).

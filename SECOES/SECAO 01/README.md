@@ -57,4 +57,4 @@ O percurso de formação do curso é composto pelos seguintes tópicos:
 
 O curso possui como principais pilares a programação orientada a objetos, a linguagem Java e um conteúdo prático com exercícios voltados para situações reais. Os exercícios diferem dos encontrados em faculdades de TI, proporcionando uma abordagem mais próxima de projetos reais.
 
-Na pasta resumos, contem o resumo feito por mim ao longo do desenvolvimento do curso.
+Na pasta [Resumo](../SECAO%2001/RESUMOS/), contem o resumo feito por mim ao longo do desenvolvimento do curso.

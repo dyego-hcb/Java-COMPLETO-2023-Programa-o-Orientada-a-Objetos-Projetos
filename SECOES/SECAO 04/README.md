@@ -33,12 +33,12 @@ A classe `Math` em Java oferece diversas funções matemáticas úteis, como cá
 
 ## Exemplos e Prática
 
-Na pasta "Exemplos", você encontrará códigos Java que foram apresentados em aula. Eles ilustram como aplicar conceitos da Estrutura Sequencial para resolver problemas reais.
+Na pasta [Exemplos Video Aula](../SECAO%2004/PROJETOS/EXEMPLOS%20VIDEO%20AULA/), você encontrará códigos Java que foram apresentados em aula. Eles ilustram como aplicar conceitos da Estrutura Sequencial para resolver problemas reais.
 
-A pasta "Exercícios" contém a resolução dos exercícios propostos. Praticar é fundamental para a consolidação do conhecimento.
+A pasta [Exercicios](../SECAO%2004/PROJETOS/EXERCICIOS/) contém a resolução dos exercícios propostos. Praticar é fundamental para a consolidação do conhecimento.
 
 ## Pasta "Resumo"
 
-O resumo completo desta aula está contido na pasta "Resumo". O arquivo detalhado em formato txt pode ser encontrado [aqui](/SECOES/SECAO%2004/RESUMO/RESUMO%20SECAO%2004%20-%20CURSO%20JAVA.txt). Este resumo oferece uma visão aprofundada dos tópicos abordados nesta seção do curso.
+O resumo completo desta aula está contido na pasta [Resumo](../SECAO%2004/RESUMO/). Este resumo oferece uma visão aprofundada dos tópicos abordados nesta seção do curso.
 
 Essa seção é crucial para construir uma base sólida em programação, que será utilizada nas seções seguintes do curso. Praticar os conceitos aprendidos através de exercícios é essencial para aprimorar suas habilidades em Java e programação em geral.

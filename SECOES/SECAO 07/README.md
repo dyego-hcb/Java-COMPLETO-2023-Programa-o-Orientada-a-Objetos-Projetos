@@ -4,9 +4,9 @@ Bem-vindo ao repositório da **Seção 07: Outros Tópicos Básicos sobre Java**
 
 ## Conteúdo do Repositório
 
-- A pasta **exemplos video aula** contém códigos Java demonstrados nas videoaulas.
-- A pasta **exercicios** contém exercícios práticos propostos e realizados.
-- Na pasta **resumo**, você encontrará o resumo completo desta seção.
+- A pasta **[Exemplos Video Aula](../SECAO%2007/PROJETOS/EXEMPLOS%20VIDEO%20AULA/)** contém códigos Java demonstrados nas videoaulas.
+- A pasta **[Exercicios](../SECAO%2007/PROJETOS/EXERCICIOS/)** contém exercícios práticos propostos e realizados.
+- Na pasta **[Resumo](../SECAO%2007/RESUMO/)**, você encontrará o resumo completo desta seção.
 
 ## Resumo da Seção: Outros Tópicos Básicos sobre Java
 
@@ -38,4 +38,4 @@ Discutimos o conceito de funções em Java, que são chamadas de métodos. Méto
 
 ## Exercícios
 
-Você encontrará exemplos de códigos na pasta "exemplos video aula".
+Você encontrará exemplos de códigos na pasta [Exemplos Video Aula](../SECAO%2007/PROJETOS/EXEMPLOS%20VIDEO%20AULA/).

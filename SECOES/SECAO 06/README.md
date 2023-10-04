@@ -4,9 +4,9 @@ Bem-vindo ao repositório da **Seção 06: Estruturas Repetitivas** do curso "Ja
 
 ## Conteúdo do Repositório
 
-- A pasta **exemplos video aula** contém códigos Java demonstrados nas videoaulas.
-- A pasta **exercicios** contém exercícios práticos propostos e realizados.
-- Na pasta **resumo**, você encontrará o resumo completo desta seção.
+- A pasta **[Exemplos Video Aula](../SECAO%2006/PROJETOS/EXEMPLOS%20VIDEO%20AULA/)** contém códigos Java demonstrados nas videoaulas.
+- A pasta **[Exercicios](../SECAO%2006/PROJETOS/EXERCICIOS/)** contém exercícios práticos propostos e realizados.
+- Na pasta **[Resumo](../SECAO%2006/RESUMO/)**, você encontrará o resumo completo desta seção.
 
 ## Resumo da Seção: Estruturas Repetitivas
 
@@ -34,4 +34,4 @@ A estrutura **do-while** é menos comum e garante que o bloco de comandos seja e
 
 ### Exercícios e Testes de Mesa
 
-Você encontrará exemplos de códigos na pasta "exemplos video aula" e exercícios propostos na pasta "exercicios". Além disso, os exercícios de Teste de Mesa estão disponíveis no arquivo "EXERCICOS_TESTE_DE_MESA_SC06.txt" na pasta de exercícios.
+Você encontrará exemplos de códigos na pasta [Exemplos Video Aula](../SECAO%2006/PROJETOS/EXEMPLOS%20VIDEO%20AULA/) e exercícios propostos na pasta [Exercicios](../SECAO%2006/PROJETOS/EXERCICIOS/). Além disso, os exercícios de Teste de Mesa estão disponíveis no arquivo "EXERCICOS_TESTE_DE_MESA_SC06.txt" na pasta de [Exercicios](../SECAO%2006/PROJETOS/EXERCICIOS/).

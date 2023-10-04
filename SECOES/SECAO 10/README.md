@@ -2,6 +2,13 @@
 
 Nesta seção do curso de Java, exploraremos conceitos importantes relacionados ao comportamento de memória, arrays e listas.
 
+
+## Estrutura de Pastas
+
+- A pasta **[Exemplos Video Aula](../SECAO%2010/PROJETOS/EXEMPLOS%20VIDEO%20AULA/)** contém códigos Java demonstrados nas videoaulas.
+- A pasta **[Exercicios](../SECAO%2010/PROJETOS/EXERCICIOS/)** contém exercícios práticos propostos e realizados.
+- Na pasta **[Resumo](../SECAO%2010/RESUMO/)**, você encontrará o resumo completo desta seção.
+
 ## Comportamento de Memória
 
 Nesta parte do curso, você mergulhará nos aspectos essenciais do comportamento da memória em Java, incluindo:
@@ -57,8 +64,3 @@ Aprenda sobre listas em Java, suas operações comuns e como percorrê-las usand
 
 ## Matrizes
 Explore o uso de matrizes (arrays bidimensionais) em Java. Saiba como declará-las e acessar seus elementos. Compreenda suas vantagens e desvantagens em relação a outros tipos de coleções.
-
-## Estrutura de Pastas
-
-- Os resumos das aulas desta seção podem ser encontrados na pasta 'resumo'.
-- As soluções para os exercícios propostos estão disponíveis na pasta 'projetos/exemplos video aula/' e 'projetos/exercicios'.

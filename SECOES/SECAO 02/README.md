@@ -12,7 +12,7 @@ Este capítulo é voltado para iniciantes e aborda os conceitos fundamentais de 
 
 ## Resumo da Videoaula
 
-Dentro da pasta "resumo" você encontrará um arquivo com o resumo completo da videoaula desta seção. O resumo aborda os seguintes pontos:
+Dentro da pasta [Resumo](../SECAO%2002/RESUMO/) você encontrará um arquivo com o resumo completo da videoaula desta seção. O resumo aborda os seguintes pontos:
 
 - Definição de algoritmo e sua aplicação em diferentes áreas.
 - Descrição do computador, dividido em hardware e software.
