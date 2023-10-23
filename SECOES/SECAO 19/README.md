@@ -10,7 +10,6 @@ Nesta seção do curso, exploramos os conceitos de Generics, Sets e Maps em Java
 - A pasta **[Exercicios](../SECAO%2019/PROJETOS/EXERCICIOS/)** contém exercícios práticos propostos e realizados.
 - Na pasta **[Resumo](../SECAO%2019/RESUMO/)**, você encontrará o resumo completo desta seção.
 
-
 ### Generics
 
 Generics são um recurso que permite a parametrização de classes, interfaces e métodos por tipo. Suas principais vantagens são reuso, segurança de tipo (type safety) e desempenho.
