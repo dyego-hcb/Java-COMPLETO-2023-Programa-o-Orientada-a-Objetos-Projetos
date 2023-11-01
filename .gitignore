@@ -1,5 +1,12 @@
-## OS X
+# Mac OSX aux files
 .DS_Store
+**/.DS_Store
+
+third-party-open-source-licenses.txt
+**/third-party-open-source-licenses/**
+nohttp-cli-*.jar
+
+unpack/
 
 ## Java
 .mtj.tmp/
@@ -29,3 +36,40 @@ local.properties
 ## Visual Studio Code
 .vscode/
 .code-workspace
+
+*\~
+*.class
+**/classpath.txt
+**/.idea
+**/*.iml
+**/*.versionsBackup
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+**/target/*.jar
+**/jars/*.jar
+eclipse-language-servers/**/*.jar
+*.war
+*.ear
+**/.sts4-cache/*
+**/test-projects/**/*.classpath
+**/test-projects/**/*.vscode
+**/test-projects/**/*.project
+**/test-projects/**/*.settings
+**/test-projects/**/*.springBeans
+
+# Exceptions
+!**/.mvn/wrapper/maven-wrapper.jar
+!**/jdt-ls-extension/**/test-projects/**/.classpath
+!**/jdt-ls-extension/**/test-projects/**/.project
+!**/jdt-ls-extension/**/test-projects/**/.settings
+
+# virtual machine crash logs, see https://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+servers/
+target/
+bin/
+*.log

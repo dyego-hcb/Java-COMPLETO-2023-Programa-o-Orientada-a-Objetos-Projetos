@@ -4,9 +4,9 @@ Nesta seção do curso "Java Completo 2023 - Programação Orientada a Objetos +
 
 ## Estrutura de Pastas
 
-- A pasta **[Exemplos Video Aula](../SECAO%2019/PROJETOS/EXEMPLOS%20VIDEO%20AULA/)** contém códigos Java demonstrados nas videoaulas.
-- A pasta **[Exercicios](../SECAO%2019/PROJETOS/EXERCICIOS/)** contém exercícios práticos propostos e realizados.
-- Na pasta **[Resumo](../SECAO%2019/RESUMO/)**, você encontrará o resumo completo desta seção.
+- A pasta **[Exemplos Video Aula](../SECAO%2020/PROJETOS/EXEMPLOS%20VIDEO%20AULA/)** contém códigos Java demonstrados nas videoaulas.
+- A pasta **[Exercicios](../SECAO%2020/PROJETOS/EXERCICIOS/)** contém exercícios práticos propostos e realizados.
+- Na pasta **[Resumo](../SECAO%2020/RESUMO/)**, você encontrará o resumo completo desta seção.
 
 ## Comparator e Ordenação
 
