@@ -1,0 +1,1 @@
+ESSE PROJETO ESTARA NO REPOSITORIO DO GITHUB NO SEGUINTE LINK: https://github.com/zebodexx/workshop-springboot3-jpa
