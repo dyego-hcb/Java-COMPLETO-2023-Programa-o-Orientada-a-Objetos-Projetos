@@ -38,7 +38,6 @@ local.properties
 .code-workspace
 
 *\~
-*.class
 **/classpath.txt
 **/.idea
 **/*.iml
@@ -73,3 +72,13 @@ servers/
 target/
 bin/
 *.log
+
+# build folders
+bin/
+target/
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.settings/
